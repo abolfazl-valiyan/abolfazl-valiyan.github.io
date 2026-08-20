@@ -9,1540 +9,1540 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap"
           rel="stylesheet">
-<!--    <style>-->
-<!--        :root {-->
-<!--            &#45;&#45;bg: #eee7d2;-->
-<!--            &#45;&#45;paper: #f6f1e2;-->
-<!--            &#45;&#45;paper2: #efe8d5;-->
-<!--            &#45;&#45;ink: #15140f;-->
-<!--            &#45;&#45;green: #2f9e63;-->
-<!--            &#45;&#45;orange: #e8562c;-->
-<!--            &#45;&#45;yellow: #f4c430;-->
-<!--            &#45;&#45;blue: #4f7de8;-->
-<!--            &#45;&#45;muted: #6b6a58;-->
-<!--            &#45;&#45;line: rgba(21, 20, 15, .18);-->
-<!--            &#45;&#45;dot: rgba(21, 20, 15, .20);-->
-<!--            &#45;&#45;mono: 'JetBrains Mono', monospace;-->
-<!--            &#45;&#45;disp: 'Archivo Black', sans-serif;-->
-<!--            &#45;&#45;fa: 'Vazirmatn', sans-serif;-->
-<!--        }-->
-
-<!--        * {-->
-<!--            box-sizing: border-box;-->
-<!--            margin: 0;-->
-<!--            padding: 0;-->
-<!--        }-->
-
-<!--        html, body {-->
-<!--            height: 100%;-->
-<!--            overflow-x: hidden;-->
-<!--        }-->
-
-<!--        body {-->
-<!--            background-color: var(&#45;&#45;bg);-->
-<!--            background-image: radial-gradient(var(&#45;&#45;dot) 1.6px, transparent 1.6px);-->
-<!--            background-size: 22px 22px;-->
-<!--            color: var(&#45;&#45;ink);-->
-<!--            font-family: var(&#45;&#45;fa);-->
-<!--            min-height: 100%;-->
-<!--        }-->
-
-<!--        ::-webkit-scrollbar {-->
-<!--            width: 9px;-->
-<!--            height: 9px;-->
-<!--        }-->
-
-<!--        ::-webkit-scrollbar-track {-->
-<!--            background: var(&#45;&#45;paper2);-->
-<!--        }-->
-
-<!--        ::-webkit-scrollbar-thumb {-->
-<!--            background: var(&#45;&#45;ink);-->
-<!--            border-radius: 4px;-->
-<!--        }-->
-
-<!--        * {-->
-<!--            scrollbar-width: thin;-->
-<!--            scrollbar-color: var(&#45;&#45;ink) var(&#45;&#45;paper2);-->
-<!--        }-->
-
-<!--        .ltr {-->
-<!--            direction: ltr;-->
-<!--            unicode-bidi: isolate;-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; IG-style header &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .igbar {-->
-<!--            max-width: 1180px;-->
-<!--            margin: 22px auto 0;-->
-<!--            padding: 14px 20px;-->
-<!--            background: var(&#45;&#45;ink);-->
-<!--            color: #fff;-->
-<!--            border-radius: 16px 16px 0 0;-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: space-between;-->
-<!--            position: relative;-->
-<!--            z-index: 5;-->
-<!--        }-->
-
-<!--        .ig-left {-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            gap: 12px;-->
-<!--        }-->
-
-<!--        .ring {-->
-<!--            width: 44px;-->
-<!--            height: 44px;-->
-<!--            border-radius: 50%;-->
-<!--            padding: 2.5px;-->
-<!--            flex: none;-->
-<!--            background: conic-gradient(from 210deg, #ff5b5b, #ffb020, #ff2d95, #6c5ce7, #ff5b5b);-->
-<!--        }-->
-
-<!--        .avatar-ig {-->
-<!--            width: 100%;-->
-<!--            height: 100%;-->
-<!--            border-radius: 50%;-->
-<!--            background: var(&#45;&#45;ink);-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--            overflow: hidden;-->
-<!--        }-->
-
-<!--        .avatar-ig #pixel-avatar {-->
-<!--            grid-template-columns:repeat(10, 3.6px);-->
-<!--            grid-template-rows:repeat(10, 3.6px);-->
-<!--        }-->
-
-<!--        .avatar-ig #pixel-avatar div {-->
-<!--            width: 3.6px;-->
-<!--            height: 3.6px;-->
-<!--        }-->
-
-<!--        .ig-left b {-->
-<!--            font-family: var(&#45;&#45;disp);-->
-<!--            font-size: .92rem;-->
-<!--            letter-spacing: .5px;-->
-<!--            direction: ltr;-->
-<!--            display: inline-block;-->
-<!--        }-->
-
-<!--        .hamburger {-->
-<!--            background: none;-->
-<!--            border: 1px solid rgba(255, 255, 255, .35);-->
-<!--            color: #fff;-->
-<!--            width: 38px;-->
-<!--            height: 34px;-->
-<!--            border-radius: 8px;-->
-<!--            cursor: pointer;-->
-<!--            font-size: 16px;-->
-<!--            position: relative;-->
-<!--        }-->
-
-<!--        .menu {-->
-<!--            position: absolute;-->
-<!--            top: 44px;-->
-<!--            left: 20px;-->
-<!--            background: var(&#45;&#45;ink);-->
-<!--            color: #fff;-->
-<!--            border-radius: 10px;-->
-<!--            padding: 8px;-->
-<!--            display: none;-->
-<!--            flex-direction: column;-->
-<!--            min-width: 170px;-->
-<!--            box-shadow: 6px 6px 0 0 var(&#45;&#45;orange);-->
-<!--            z-index: 20;-->
-<!--            font-family: var(&#45;&#45;mono);-->
-<!--            font-size: .78rem;-->
-<!--        }-->
-
-<!--        .menu.open {-->
-<!--            display: flex;-->
-<!--        }-->
-
-<!--        .menu a {-->
-<!--            color: #fff;-->
-<!--            text-decoration: none;-->
-<!--            padding: 8px 10px;-->
-<!--            border-radius: 6px;-->
-<!--        }-->
-
-<!--        .menu a:hover {-->
-<!--            background: rgba(255, 255, 255, .12);-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; sheet &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .sheet {-->
-<!--            max-width: 1180px;-->
-<!--            margin: 0 auto;-->
-<!--            position: relative;-->
-<!--            background-color: var(&#45;&#45;bg);-->
-<!--            background-image: radial-gradient(var(&#45;&#45;dot) 1.6px, transparent 1.6px);-->
-<!--            background-size: 22px 22px;-->
-<!--            border: 2.5px solid var(&#45;&#45;ink);-->
-<!--            border-top: none;-->
-<!--            border-radius: 0 0 16px 16px;-->
-<!--            padding: 30px 26px 8px;-->
-<!--            overflow: hidden;-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; brand row &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .brand-row {-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            gap: 16px;-->
-<!--            margin-bottom: 26px;-->
-<!--            flex-wrap: wrap;-->
-<!--        }-->
-
-<!--        .brand-icon {-->
-<!--            width: 58px;-->
-<!--            height: 58px;-->
-<!--            flex: none;-->
-<!--            border: 2.5px solid var(&#45;&#45;ink);-->
-<!--            border-radius: 10px;-->
-<!--            background: var(&#45;&#45;paper);-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--            transform: rotate(-4deg);-->
-<!--            box-shadow: 5px 5px 0 0 var(&#45;&#45;orange);-->
-<!--            color: var(&#45;&#45;ink);-->
-<!--        }-->
-
-<!--        .brand-icon svg {-->
-<!--            width: 26px;-->
-<!--            height: 26px;-->
-<!--        }-->
-
-<!--        .brand-name {-->
-<!--            font-family: var(&#45;&#45;fa);-->
-<!--            font-weight: 900;-->
-<!--            font-size: 1.05rem;-->
-<!--            margin-bottom: 6px;-->
-<!--        }-->
-
-<!--        .brand-tag {-->
-<!--            display: inline-block;-->
-<!--            background: var(&#45;&#45;ink);-->
-<!--            color: #fff;-->
-<!--            font-family: var(&#45;&#45;mono);-->
-<!--            font-size: .68rem;-->
-<!--            letter-spacing: 1px;-->
-<!--            padding: 5px 10px;-->
-<!--            border-radius: 5px;-->
-<!--            direction: ltr;-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; reusable sticker components &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .eyebrow {-->
-<!--            display: inline-block;-->
-<!--            background: var(&#45;&#45;ink);-->
-<!--            color: #fff;-->
-<!--            font-family: var(&#45;&#45;mono);-->
-<!--            font-size: .62rem;-->
-<!--            letter-spacing: 2.5px;-->
-<!--            padding: 6px 12px;-->
-<!--            border-radius: 5px;-->
-<!--            transform: rotate(-1deg);-->
-<!--            margin-bottom: 10px;-->
-<!--        }-->
-
-<!--        .stkr {-->
-<!--            position: relative;-->
-<!--            display: inline-block;-->
-<!--            margin-bottom: 6px;-->
-<!--        }-->
-
-<!--        .stkr .sh {-->
-<!--            position: absolute;-->
-<!--            inset: 0;-->
-<!--            border-radius: 8px;-->
-<!--            z-index: 0;-->
-<!--        }-->
-
-<!--        .stkr .fr {-->
-<!--            position: relative;-->
-<!--            z-index: 1;-->
-<!--            background: var(&#45;&#45;ink);-->
-<!--            color: #fff;-->
-<!--            font-family: var(&#45;&#45;fa);-->
-<!--            font-weight: 900;-->
-<!--            padding: 12px 20px;-->
-<!--            border-radius: 8px;-->
-<!--            font-size: 1.25rem;-->
-<!--        }-->
-
-<!--        .stkr.g .sh {-->
-<!--            background: var(&#45;&#45;green);-->
-<!--            transform: translate(6px, 6px) rotate(-1deg);-->
-<!--        }-->
-
-<!--        .stkr.o .sh {-->
-<!--            background: var(&#45;&#45;orange);-->
-<!--            transform: translate(6px, 6px) rotate(1deg);-->
-<!--        }-->
-
-<!--        .stkr.g .fr {-->
-<!--            transform: rotate(-1deg);-->
-<!--        }-->
-
-<!--        .stkr.o .fr {-->
-<!--            transform: rotate(1deg);-->
-<!--        }-->
-
-<!--        .chip {-->
-<!--            display: inline-flex;-->
-<!--            align-items: center;-->
-<!--            gap: 5px;-->
-<!--            background: var(&#45;&#45;ink);-->
-<!--            color: #fff;-->
-<!--            font-family: var(&#45;&#45;mono);-->
-<!--            font-size: .68rem;-->
-<!--            letter-spacing: 1px;-->
-<!--            padding: 5px 10px;-->
-<!--            border-radius: 5px;-->
-<!--            direction: ltr;-->
-<!--        }-->
-
-<!--        .chip.ghost {-->
-<!--            background: var(&#45;&#45;paper);-->
-<!--            color: var(&#45;&#45;ink);-->
-<!--            border: 2px solid var(&#45;&#45;ink);-->
-<!--        }-->
-
-<!--        .burst {-->
-<!--            display: inline-block;-->
-<!--            background: var(&#45;&#45;yellow);-->
-<!--            color: var(&#45;&#45;ink);-->
-<!--            border: 2.5px solid var(&#45;&#45;ink);-->
-<!--            font-family: var(&#45;&#45;disp);-->
-<!--            font-size: .72rem;-->
-<!--            letter-spacing: .5px;-->
-<!--            padding: 6px 12px;-->
-<!--            border-radius: 6px;-->
-<!--            box-shadow: 4px 4px 0 0 var(&#45;&#45;ink);-->
-<!--            transform: rotate(-2deg);-->
-<!--            direction: ltr;-->
-<!--        }-->
-
-<!--        mark.hl {-->
-<!--            background: var(&#45;&#45;yellow);-->
-<!--            color: var(&#45;&#45;ink);-->
-<!--            padding: 1px 6px;-->
-<!--            border-radius: 4px;-->
-<!--            box-decoration-break: clone;-->
-<!--            -webkit-box-decoration-break: clone;-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; layout &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .layout {-->
-<!--            display: grid;-->
-<!--            grid-template-columns:296px 1fr;-->
-<!--            gap: 20px;-->
-<!--            padding-top: 4px;-->
-<!--        }-->
-
-<!--        .sidebar {-->
-<!--            display: flex;-->
-<!--            flex-direction: column;-->
-<!--            gap: 18px;-->
-<!--            padding-bottom: 22px;-->
-<!--        }-->
-
-<!--        .content {-->
-<!--            display: flex;-->
-<!--            flex-direction: column;-->
-<!--            gap: 18px;-->
-<!--            padding-bottom: 22px;-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; panel &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .panel {-->
-<!--            background: var(&#45;&#45;paper);-->
-<!--            border: 2.5px solid var(&#45;&#45;ink);-->
-<!--            border-radius: 12px;-->
-<!--            padding: 18px;-->
-<!--            position: relative;-->
-<!--            opacity: 0;-->
-<!--            transform: translateY(16px);-->
-<!--            transition: opacity .5s ease, transform .5s ease;-->
-<!--        }-->
-
-<!--        .panel.in {-->
-<!--            opacity: 1;-->
-<!--            transform: translateY(0);-->
-<!--        }-->
-
-<!--        .panel.sh-g {-->
-<!--            box-shadow: 7px 7px 0 0 var(&#45;&#45;green);-->
-<!--        }-->
-
-<!--        .panel.sh-o {-->
-<!--            box-shadow: 7px 7px 0 0 var(&#45;&#45;orange);-->
-<!--        }-->
-
-<!--        .panel-head {-->
-<!--            display: inline-block;-->
-<!--            background: var(&#45;&#45;ink);-->
-<!--            color: #fff;-->
-<!--            font-family: var(&#45;&#45;mono);-->
-<!--            font-weight: 700;-->
-<!--            font-size: .66rem;-->
-<!--            letter-spacing: 2px;-->
-<!--            padding: 6px 12px;-->
-<!--            border-radius: 5px;-->
-<!--            margin-bottom: 16px;-->
-<!--            transform: rotate(-1deg);-->
-<!--            box-shadow: 3px 3px 0 0 var(&#45;&#45;panel-sh, var(&#45;&#45;green));-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; profile &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .profile {-->
-<!--            text-align: center;-->
-<!--        }-->
-
-<!--        .avatar-wrap {-->
-<!--            width: 112px;-->
-<!--            height: 112px;-->
-<!--            margin: 0 auto 14px;-->
-<!--            border: 2.5px solid var(&#45;&#45;ink);-->
-<!--            border-radius: 10px;-->
-<!--            background: var(&#45;&#45;paper2);-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--            box-shadow: 6px 6px 0 0 var(&#45;&#45;orange);-->
-<!--            transform: rotate(-2deg);-->
-<!--            overflow: hidden;-->
-<!--        }-->
-
-<!--        #pixel-avatar {-->
-<!--            display: grid;-->
-<!--            grid-template-columns:repeat(10, 8px);-->
-<!--            grid-template-rows:repeat(10, 8px);-->
-<!--        }-->
-
-<!--        #pixel-avatar div {-->
-<!--            width: 8px;-->
-<!--            height: 8px;-->
-<!--        }-->
-
-<!--        .profile h1 {-->
-<!--            font-family: var(&#45;&#45;fa);-->
-<!--            font-weight: 900;-->
-<!--            font-size: 1.15rem;-->
-<!--            margin-bottom: 8px;-->
-<!--        }-->
-
-<!--        .profile .role {-->
-<!--            display: inline-block;-->
-<!--            font-family: var(&#45;&#45;mono);-->
-<!--            font-size: .68rem;-->
-<!--            letter-spacing: 1px;-->
-<!--            color: var(&#45;&#45;muted);-->
-<!--            border: 2px solid var(&#45;&#45;ink);-->
-<!--            border-radius: 5px;-->
-<!--            padding: 4px 10px;-->
-<!--            margin-bottom: 12px;-->
-<!--        }-->
-
-<!--        .profile hr {-->
-<!--            border: none;-->
-<!--            border-top: 2px dashed var(&#45;&#45;line);-->
-<!--            margin: 12px 0;-->
-<!--        }-->
-
-<!--        .tagline {-->
-<!--            font-family: var(&#45;&#45;mono);-->
-<!--            font-size: .76rem;-->
-<!--            color: var(&#45;&#45;ink);-->
-<!--            text-align: right;-->
-<!--            line-height: 1.7;-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; contact &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .contact-row {-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            gap: 10px;-->
-<!--            padding: 8px 0;-->
-<!--            font-size: .82rem;-->
-<!--            border-bottom: 1px dashed var(&#45;&#45;line);-->
-<!--        }-->
-
-<!--        .contact-row:last-child {-->
-<!--            border-bottom: none;-->
-<!--        }-->
-
-<!--        .contact-row > span:last-child {-->
-<!--            min-width: 0;-->
-<!--            overflow-wrap: anywhere;-->
-<!--        }-->
-
-<!--        .c-ic {-->
-<!--            width: 26px;-->
-<!--            height: 26px;-->
-<!--            flex: none;-->
-<!--            border-radius: 6px;-->
-<!--            border: 2px solid var(&#45;&#45;ink);-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--            background: var(&#45;&#45;paper2);-->
-<!--            color: var(&#45;&#45;ink);-->
-<!--        }-->
-
-<!--        .c-ic svg {-->
-<!--            width: 13px;-->
-<!--            height: 13px;-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; token-meter skills &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .skill-row {-->
-<!--            margin-bottom: 13px;-->
-<!--        }-->
-
-<!--        .skill-row:last-child {-->
-<!--            margin-bottom: 0;-->
-<!--        }-->
-
-<!--        .skill-top {-->
-<!--            display: flex;-->
-<!--            justify-content: space-between;-->
-<!--            align-items: center;-->
-<!--            font-size: .8rem;-->
-<!--            margin-bottom: 6px;-->
-<!--        }-->
-
-<!--        .skill-top b {-->
-<!--            font-weight: 700;-->
-<!--        }-->
-
-<!--        .skill-top span.pct {-->
-<!--            font-family: var(&#45;&#45;mono);-->
-<!--            font-size: .66rem;-->
-<!--            color: var(&#45;&#45;muted);-->
-<!--        }-->
-
-<!--        .tokens {-->
-<!--            display: flex;-->
-<!--            gap: 4px;-->
-<!--        }-->
-
-<!--        .tick {-->
-<!--            width: 16px;-->
-<!--            height: 14px;-->
-<!--            border: 2px solid var(&#45;&#45;ink);-->
-<!--            border-radius: 3px;-->
-<!--            background: transparent;-->
-<!--            transform: scale(.85);-->
-<!--            opacity: .55;-->
-<!--            transition: all .25s ease;-->
-<!--        }-->
-
-<!--        .tick.dash {-->
-<!--            border-style: dashed;-->
-<!--        }-->
-
-<!--        .tick.filled {-->
-<!--            background: var(&#45;&#45;green);-->
-<!--            transform: scale(1);-->
-<!--            opacity: 1;-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; tools &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .tools-grid {-->
-<!--            display: grid;-->
-<!--            grid-template-columns:repeat(3, 1fr);-->
-<!--            gap: 10px;-->
-<!--        }-->
-
-<!--        .tool {-->
-<!--            display: flex;-->
-<!--            flex-direction: column;-->
-<!--            align-items: center;-->
-<!--            gap: 6px;-->
-<!--            padding: 10px 4px;-->
-<!--            border: 2px solid var(&#45;&#45;ink);-->
-<!--            border-radius: 8px;-->
-<!--            background: var(&#45;&#45;paper2);-->
-<!--            font-size: .65rem;-->
-<!--            font-weight: 600;-->
-<!--            color: var(&#45;&#45;ink);-->
-<!--            transition: transform .18s;-->
-<!--        }-->
-
-<!--        .tool:hover {-->
-<!--            transform: translateY(-3px);-->
-<!--        }-->
-
-<!--        .tool-badge {-->
-<!--            width: 30px;-->
-<!--            height: 30px;-->
-<!--            border-radius: 7px;-->
-<!--            flex: none;-->
-<!--            border: 2px solid var(&#45;&#45;ink);-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--            color: var(&#45;&#45;ink);-->
-<!--            background: var(&#45;&#45;paper);-->
-<!--            box-shadow: 2.5px 2.5px 0 0 var(&#45;&#45;ink);-->
-<!--        }-->
-
-<!--        .tool-badge i {-->
-<!--            font-size: 18px;-->
-<!--            line-height: 1;-->
-<!--        }-->
-
-<!--        .tool-badge.vscode {-->
-<!--            background: #0078d7;-->
-<!--        }-->
-
-<!--        .tool-badge.git {-->
-<!--            background: #f34f29;-->
-<!--        }-->
-
-<!--        .tool-badge.git {-->
-<!--            color: #ffffff;-->
-<!--        }-->
-
-<!--        .tool-badge.docker {-->
-<!--            background: #cce7ff;-->
-<!--        }-->
-
-<!--        .tool-badge.postgresql {-->
-<!--            background: #7839d8;-->
-<!--        }-->
-
-<!--        .tool-badge.redis {-->
-<!--            background: #d82c20;-->
-<!--        }-->
-
-<!--        .tool-badge.redis {-->
-<!--            color: #ffffff;-->
-<!--        }-->
-
-
-<!--        .tool-badge.github {-->
-<!--            background: #040809;-->
-<!--        }-->
-
-<!--        .tool-badge.github {-->
-<!--            color: #ffffff;-->
-<!--        }-->
-<!--        .tool-badge.jetbrains {-->
-<!--            background: #fcf84a; /* یا رنگ دلخواه مثل #f4c430 */-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--            overflow: hidden;-->
-<!--        }-->
-
-<!--        .tool-badge.jetbrains i {-->
-<!--            font-size: 50px;-->
-<!--            filter: drop-shadow(0 0 2px rgba(0,0,0,0.1));-->
-<!--        }-->
-
-<!--        /* اگر آیکون هنوز سیاه است، از فیلتر استفاده کنید */-->
-<!--        .tool-badge.jetbrains i.devicon-jetbrains-plain {-->
-<!--            /* حذف پس‌زمینه سیاه با فیلتر */-->
-<!--            filter: brightness(0) saturate(100%) invert(0%) sepia(0%) hue-rotate(0deg) contrast(90%);-->
-<!--        }-->
-<!--        .tool-badge.postman {-->
-<!--            background: #ff6c37;-->
-<!--        }-->
-<!--        .tool-badge.mysql {-->
-<!--            background: #37ffe1;-->
-<!--        }-->
-<!--        .tool-badge.claude {-->
-<!--            background: #d97757;-->
-<!--            color: #fff;-->
-<!--        }-->
-<!--        .tool-badge.claude .ai-logo {-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--        }-->
-<!--        .tool-badge.gemini {-->
-<!--            background: #ffffff;-->
-<!--            color: #4285f4;-->
-<!--        }-->
-<!--        .tool-badge.gemini .ai-logo {-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--        }-->
-<!--        .tool-badge.chatgpt {-->
-<!--            background: #000000;-->
-<!--            color: #fff;-->
-<!--        }-->
-<!--        .tool-badge.chatgpt .ai-logo {-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--        }-->
-<!--        .tool-badge .ai-logo svg {-->
-<!--            width: 17px;-->
-<!--            height: 17px;-->
-<!--            display: block;-->
-<!--        }-->
-<!--        .tool-badge.claude .ai-logo svg {-->
-<!--            width: 16px;-->
-<!--            height: 16px;-->
-<!--        }-->
-<!--        .tool-badge.chatgpt .ai-logo svg {-->
-<!--            width: 16px;-->
-<!--            height: 16px;-->
-<!--        }-->
-<!--        .tool-badge.claude {-->
-<!--            padding: 0;-->
-<!--            overflow: hidden;-->
-<!--        }-->
-
-<!--        .tool-badge.claude .ai-logo img {-->
-<!--            width: 100%;-->
-<!--            height: 100%;-->
-<!--            object-fit: cover;-->
-<!--            display: block;-->
-<!--        }-->
-
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; interests &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .interests-row {-->
-<!--            display: flex;-->
-<!--            flex-wrap: wrap;-->
-<!--            gap: 8px;-->
-<!--        }-->
-
-<!--        .interest-badge {-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            gap: 7px;-->
-<!--            padding: 7px 12px;-->
-<!--            border: 2px solid var(&#45;&#45;ink);-->
-<!--            border-radius: 20px;-->
-<!--            font-size: .72rem;-->
-<!--            font-weight: 600;-->
-<!--            background: var(&#45;&#45;paper2);-->
-<!--            color: var(&#45;&#45;ink);-->
-<!--        }-->
-
-<!--        .interest-badge svg {-->
-<!--            width: 13px;-->
-<!--            height: 13px;-->
-<!--            flex: none;-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; about &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .about-top {-->
-<!--            display: flex;-->
-<!--            align-items: flex-start;-->
-<!--            justify-content: space-between;-->
-<!--            gap: 10px;-->
-<!--        }-->
-
-<!--        .about-ic {-->
-<!--            width: 46px;-->
-<!--            height: 46px;-->
-<!--            flex: none;-->
-<!--            border: 2.5px solid var(&#45;&#45;ink);-->
-<!--            border-radius: 9px;-->
-<!--            background: var(&#45;&#45;paper2);-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--            transform: rotate(3deg);-->
-<!--            box-shadow: 4px 4px 0 0 var(&#45;&#45;green);-->
-<!--        }-->
-
-<!--        .about-ic svg {-->
-<!--            width: 21px;-->
-<!--            height: 21px;-->
-<!--        }-->
-
-<!--        .about p {-->
-<!--            font-size: .92rem;-->
-<!--            line-height: 2;-->
-<!--            margin-top: 8px;-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; flow (experience chain) &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .flow {-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            gap: 0;-->
-<!--            overflow-x: auto;-->
-<!--            padding: 8px 2px 18px;-->
-<!--            direction: ltr;-->
-<!--        }-->
-
-<!--        .flow-node {-->
-<!--            flex: none;-->
-<!--            background: var(&#45;&#45;ink);-->
-<!--            color: #fff;-->
-<!--            font-family: var(&#45;&#45;mono);-->
-<!--            font-weight: 700;-->
-<!--            font-size: .72rem;-->
-<!--            padding: 9px 14px;-->
-<!--            border-radius: 6px;-->
-<!--            white-space: nowrap;-->
-<!--        }-->
-
-<!--        .flow-node.now {-->
-<!--            background: var(&#45;&#45;green);-->
-<!--            box-shadow: 3px 3px 0 0 var(&#45;&#45;ink);-->
-<!--        }-->
-
-<!--        .flow-dash {-->
-<!--            flex: 1;-->
-<!--            min-width: 26px;-->
-<!--            height: 0;-->
-<!--            border-top: 2.5px dashed var(&#45;&#45;ink);-->
-<!--            margin: 0 4px;-->
-<!--            position: relative;-->
-<!--            top: 1px;-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; timeline &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .timeline {-->
-<!--            position: relative;-->
-<!--            padding-inline-start: 24px;-->
-<!--        }-->
-
-<!--        .timeline::before {-->
-<!--            content: '';-->
-<!--            position: absolute;-->
-<!--            top: 4px;-->
-<!--            bottom: 4px;-->
-<!--            inset-inline-start: 6px;-->
-<!--            width: 2.5px;-->
-<!--            background: repeating-linear-gradient(var(&#45;&#45;ink) 0 6px, transparent 6px 12px);-->
-<!--        }-->
-
-<!--        .titem {-->
-<!--            position: relative;-->
-<!--            padding-bottom: 24px;-->
-<!--        }-->
-
-<!--        .titem:last-child {-->
-<!--            padding-bottom: 0;-->
-<!--        }-->
-
-<!--        .titem::before {-->
-<!--            content: '';-->
-<!--            position: absolute;-->
-<!--            top: 2px;-->
-<!--            inset-inline-start: -24px;-->
-<!--            width: 13px;-->
-<!--            height: 13px;-->
-<!--            border-radius: 3px;-->
-<!--            background: var(&#45;&#45;green);-->
-<!--            border: 2px solid var(&#45;&#45;ink);-->
-<!--        }-->
-
-<!--        .trow {-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            gap: 8px;-->
-<!--            flex-wrap: wrap;-->
-<!--            margin-bottom: 6px;-->
-<!--        }-->
-
-<!--        .trole {-->
-<!--            font-size: .98rem;-->
-<!--            font-weight: 800;-->
-<!--        }-->
-
-<!--        .tcompany {-->
-<!--            font-size: .78rem;-->
-<!--            color: var(&#45;&#45;muted);-->
-<!--            margin-bottom: 8px;-->
-<!--        }-->
-
-<!--        .tlist {-->
-<!--            list-style: none;-->
-<!--            display: flex;-->
-<!--            flex-direction: column;-->
-<!--            gap: 5px;-->
-<!--        }-->
-
-<!--        .tlist li {-->
-<!--            font-size: .82rem;-->
-<!--            position: relative;-->
-<!--            padding-inline-start: 16px;-->
-<!--        }-->
-
-<!--        .tlist li::before {-->
-<!--            content: '▪';-->
-<!--            position: absolute;-->
-<!--            inset-inline-start: 0;-->
-<!--            color: var(&#45;&#45;orange);-->
-<!--            font-size: .6rem;-->
-<!--            top: 4px;-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; projects &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .project-card {-->
-<!--            display: flex;-->
-<!--            gap: 14px;-->
-<!--            padding: 14px;-->
-<!--            border: 2.5px solid var(&#45;&#45;ink);-->
-<!--            border-radius: 10px;-->
-<!--            background: var(&#45;&#45;paper2);-->
-<!--            margin-bottom: 14px;-->
-<!--            position: relative;-->
-<!--            box-shadow: 6px 6px 0 0 var(&#45;&#45;orange);-->
-<!--            transition: transform .18s;-->
-<!--        }-->
-
-<!--        .project-card:last-child {-->
-<!--            margin-bottom: 0;-->
-<!--        }-->
-
-<!--        .project-card:hover {-->
-<!--            transform: translate(-2px, -2px);-->
-<!--        }-->
-
-<!--        .p-icon {-->
-<!--            width: 44px;-->
-<!--            height: 44px;-->
-<!--            flex: none;-->
-<!--            border-radius: 9px;-->
-<!--            border: 2.5px solid var(&#45;&#45;ink);-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--            background: var(&#45;&#45;paper);-->
-<!--            color: var(&#45;&#45;ink);-->
-<!--        }-->
-
-<!--        .p-icon svg {-->
-<!--            width: 20px;-->
-<!--            height: 20px;-->
-<!--        }-->
-
-<!--        .p-head {-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            gap: 8px;-->
-<!--            flex-wrap: wrap;-->
-<!--            margin-bottom: 6px;-->
-<!--        }-->
-
-<!--        .p-title {-->
-<!--            font-weight: 800;-->
-<!--            font-size: .95rem;-->
-<!--        }-->
-
-<!--        .p-tag {-->
-<!--            font-family: var(&#45;&#45;mono);-->
-<!--            font-size: .62rem;-->
-<!--            font-weight: 700;-->
-<!--            padding: 3px 8px;-->
-<!--            border-radius: 5px;-->
-<!--            background: var(&#45;&#45;ink);-->
-<!--            color: #fff;-->
-<!--            direction: ltr;-->
-<!--        }-->
-
-<!--        .p-year {-->
-<!--            margin-inline-start: auto;-->
-<!--            font-family: var(&#45;&#45;mono);-->
-<!--            font-size: .72rem;-->
-<!--            color: var(&#45;&#45;muted);-->
-<!--            direction: ltr;-->
-<!--        }-->
-
-<!--        .p-desc {-->
-<!--            font-size: .82rem;-->
-<!--            color: var(&#45;&#45;muted);-->
-<!--            line-height: 1.8;-->
-<!--            margin-bottom: 8px;-->
-<!--        }-->
-
-<!--        .p-link {-->
-<!--            font-family: var(&#45;&#45;mono);-->
-<!--            font-size: .74rem;-->
-<!--            color: var(&#45;&#45;ink);-->
-<!--            font-weight: 700;-->
-<!--            text-decoration: underline;-->
-<!--            direction: ltr;-->
-<!--            display: inline-block;-->
-<!--        }-->
-
-<!--        .p-feat {-->
-<!--            position: absolute;-->
-<!--            top: -12px;-->
-<!--            left: -10px;-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; edu / certs &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .edu-item, .cert-item {-->
-<!--            display: flex;-->
-<!--            gap: 14px;-->
-<!--            align-items: flex-start;-->
-<!--        }-->
-
-<!--        .cert-item {-->
-<!--            margin-bottom: 14px;-->
-<!--        }-->
-
-<!--        .cert-item:last-child {-->
-<!--            margin-bottom: 0;-->
-<!--        }-->
-
-<!--        .cert-badge {-->
-<!--            width: 36px;-->
-<!--            height: 36px;-->
-<!--            flex: none;-->
-<!--            border-radius: 8px;-->
-<!--            border: 2.5px solid var(&#45;&#45;ink);-->
-<!--            display: flex;-->
-<!--            align-items: center;-->
-<!--            justify-content: center;-->
-<!--            font-family: var(&#45;&#45;mono);-->
-<!--            font-weight: 800;-->
-<!--            font-size: 12px;-->
-<!--            color: var(&#45;&#45;ink);-->
-<!--            background: var(&#45;&#45;tc2, var(&#45;&#45;yellow));-->
-<!--            box-shadow: 3px 3px 0 0 var(&#45;&#45;ink);-->
-<!--        }-->
-
-<!--        .cert-badge svg {-->
-<!--            width: 17px;-->
-<!--            height: 17px;-->
-<!--        }-->
-
-<!--        .cert-name {-->
-<!--            font-weight: 800;-->
-<!--            font-size: .88rem;-->
-<!--        }-->
-
-<!--        .cert-issuer {-->
-<!--            font-size: .75rem;-->
-<!--            color: var(&#45;&#45;muted);-->
-<!--        }-->
-
-<!--        .cert-year {-->
-<!--            margin-inline-start: auto;-->
-<!--            font-family: var(&#45;&#45;mono);-->
-<!--            font-size: .72rem;-->
-<!--            color: var(&#45;&#45;muted);-->
-<!--            direction: ltr;-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; footer / caption &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        .caption {-->
-<!--            border-top: 2.5px dashed var(&#45;&#45;line);-->
-<!--            margin-top: 6px;-->
-<!--            padding: 26px 4px 30px;-->
-<!--            text-align: center;-->
-<!--            font-family: var(&#45;&#45;fa);-->
-<!--            font-weight: 700;-->
-<!--            font-size: 1.05rem;-->
-<!--            line-height: 2.1;-->
-<!--            position: relative;-->
-<!--        }-->
-
-<!--        .caption .cta {-->
-<!--            position: absolute;-->
-<!--            bottom: -4px;-->
-<!--            left: 6px;-->
-<!--            font-family: var(&#45;&#45;disp);-->
-<!--            font-size: .62rem;-->
-<!--            background: var(&#45;&#45;yellow);-->
-<!--            color: var(&#45;&#45;ink);-->
-<!--            border: 2.5px solid var(&#45;&#45;ink);-->
-<!--            padding: 6px 10px;-->
-<!--            border-radius: 6px;-->
-<!--            box-shadow: 3px 3px 0 0 var(&#45;&#45;ink);-->
-<!--            transform: rotate(-3deg);-->
-<!--            direction: ltr;-->
-<!--        }-->
-
-<!--        @media (max-width: 980px) {-->
-<!--            .layout {-->
-<!--                grid-template-columns:1fr;-->
-<!--            }-->
-
-<!--            .sheet {-->
-<!--                padding: 24px 18px 8px;-->
-<!--            }-->
-
-<!--            .caption .cta {-->
-<!--                position: static;-->
-<!--                display: inline-block;-->
-<!--                margin-top: 14px;-->
-<!--            }-->
-<!--        }-->
-
-<!--        @media (max-width: 680px) {-->
-<!--            .igbar {-->
-<!--                padding: 11px 14px;-->
-<!--                border-radius: 14px 14px 0 0;-->
-<!--                margin-top: 14px;-->
-<!--            }-->
-
-<!--            .ring {-->
-<!--                width: 38px;-->
-<!--                height: 38px;-->
-<!--            }-->
-
-<!--            .avatar-ig #pixel-avatar {-->
-<!--                grid-template-columns:repeat(10, 3.1px);-->
-<!--                grid-template-rows:repeat(10, 3.1px);-->
-<!--            }-->
-
-<!--            .avatar-ig #pixel-avatar div {-->
-<!--                width: 3.1px;-->
-<!--                height: 3.1px;-->
-<!--            }-->
-
-<!--            .ig-left b {-->
-<!--                font-size: .8rem;-->
-<!--            }-->
-
-<!--            .hamburger {-->
-<!--                width: 34px;-->
-<!--                height: 32px;-->
-<!--                font-size: 14px;-->
-<!--            }-->
-
-<!--            .sheet {-->
-<!--                padding: 20px 14px 6px;-->
-<!--                border-radius: 0 0 14px 14px;-->
-<!--            }-->
-
-<!--            .brand-row {-->
-<!--                gap: 12px;-->
-<!--                margin-bottom: 20px;-->
-<!--            }-->
-
-<!--            .brand-icon {-->
-<!--                width: 48px;-->
-<!--                height: 48px;-->
-<!--            }-->
-
-<!--            .brand-icon svg {-->
-<!--                width: 22px;-->
-<!--                height: 22px;-->
-<!--            }-->
-
-<!--            .brand-name {-->
-<!--                font-size: .95rem;-->
-<!--            }-->
-
-<!--            .hero {-->
-<!--                margin-bottom: 20px;-->
-<!--            }-->
-
-<!--            .stkr .fr {-->
-<!--                font-size: 1.02rem;-->
-<!--                padding: 10px 16px;-->
-<!--            }-->
-
-<!--            .panel {-->
-<!--                padding: 15px;-->
-<!--            }-->
-
-<!--            .panel-head {-->
-<!--                font-size: .6rem;-->
-<!--                padding: 5px 10px;-->
-<!--                margin-bottom: 13px;-->
-<!--            }-->
-
-<!--            .tools-grid {-->
-<!--                grid-template-columns:repeat(3, 1fr);-->
-<!--                gap: 8px;-->
-<!--            }-->
-
-<!--            .tool {-->
-<!--                font-size: .6rem;-->
-<!--                padding: 8px 3px;-->
-<!--            }-->
-
-<!--            .flow-node {-->
-<!--                font-size: .66rem;-->
-<!--                padding: 8px 11px;-->
-<!--            }-->
-
-<!--            .project-card {-->
-<!--                padding: 12px;-->
-<!--                gap: 11px;-->
-<!--            }-->
-
-<!--            .p-icon {-->
-<!--                width: 38px;-->
-<!--                height: 38px;-->
-<!--            }-->
-
-<!--            .p-icon svg {-->
-<!--                width: 17px;-->
-<!--                height: 17px;-->
-<!--            }-->
-
-<!--            .caption {-->
-<!--                font-size: .92rem;-->
-<!--                line-height: 1.9;-->
-<!--                padding: 22px 2px 26px;-->
-<!--            }-->
-<!--        }-->
-
-<!--        @media (max-width: 460px) {-->
-<!--            .ig-left b {-->
-<!--                display: none;-->
-<!--            }-->
-
-<!--            .brand-row {-->
-<!--                flex-wrap: nowrap;-->
-<!--            }-->
-
-<!--            .brand-icon {-->
-<!--                transform: rotate(-3deg);-->
-<!--                box-shadow: 4px 4px 0 0 var(&#45;&#45;orange);-->
-<!--            }-->
-
-<!--            .stkr .sh {-->
-<!--                transform: translate(4px, 4px) rotate(-1deg) !important;-->
-<!--            }-->
-
-<!--            .stkr .fr {-->
-<!--                font-size: .88rem;-->
-<!--                padding: 9px 13px;-->
-<!--            }-->
-
-<!--            .eyebrow {-->
-<!--                font-size: .56rem;-->
-<!--                letter-spacing: 1.6px;-->
-<!--                padding: 5px 9px;-->
-<!--            }-->
-
-<!--            .avatar-wrap {-->
-<!--                width: 92px;-->
-<!--                height: 92px;-->
-<!--            }-->
-
-<!--            #pixel-avatar {-->
-<!--                grid-template-columns:repeat(10, 6.6px);-->
-<!--                grid-template-rows:repeat(10, 6.6px);-->
-<!--            }-->
-
-<!--            #pixel-avatar div {-->
-<!--                width: 6.6px;-->
-<!--                height: 6.6px;-->
-<!--            }-->
-
-<!--            .profile h1 {-->
-<!--                font-size: 1rem;-->
-<!--            }-->
-
-<!--            .tools-grid {-->
-<!--                grid-template-columns:repeat(2, 1fr);-->
-<!--            }-->
-
-<!--            .project-card {-->
-<!--                flex-direction: column;-->
-<!--            }-->
-
-<!--            .p-icon {-->
-<!--                width: 34px;-->
-<!--                height: 34px;-->
-<!--            }-->
-
-<!--            .p-feat {-->
-<!--                position: static;-->
-<!--                display: inline-block;-->
-<!--                margin-bottom: 8px;-->
-<!--            }-->
-
-<!--            .tick {-->
-<!--                width: 13px;-->
-<!--                height: 12px;-->
-<!--            }-->
-
-<!--            .flow-node {-->
-<!--                font-size: .6rem;-->
-<!--                padding: 7px 9px;-->
-<!--            }-->
-
-<!--            .cert-item, .edu-item {-->
-<!--                gap: 10px;-->
-<!--            }-->
-
-<!--            .cert-badge {-->
-<!--                width: 32px;-->
-<!--                height: 32px;-->
-<!--            }-->
-
-<!--            .caption {-->
-<!--                font-size: .85rem;-->
-<!--            }-->
-<!--        }-->
-
-<!--        @media (prefers-reduced-motion: reduce) {-->
-<!--            * {-->
-<!--                animation: none !important;-->
-<!--                transition: none !important;-->
-<!--            }-->
-<!--        }-->
-
-<!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; mobile responsiveness overrides &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
-<!--        @media (max-width: 680px) {-->
-<!--            html, body {-->
-<!--                width: 100%;-->
-<!--                max-width: 100%;-->
-<!--                overflow-x: hidden;-->
-<!--            }-->
-
-<!--            .igbar,-->
-<!--            .sheet {-->
-<!--                width: 100%;-->
-<!--                max-width: 100%;-->
-<!--            }-->
-
-<!--            .igbar {-->
-<!--                margin-left: 0;-->
-<!--                margin-right: 0;-->
-<!--            }-->
-
-<!--            .sheet {-->
-<!--                margin-left: 0;-->
-<!--                margin-right: 0;-->
-<!--            }-->
-
-<!--            .layout {-->
-<!--                width: 100%;-->
-<!--                min-width: 0;-->
-<!--                grid-template-columns:minmax(0, 1fr);-->
-<!--            }-->
-
-<!--            .sidebar,-->
-<!--            .content {-->
-<!--                min-width: 0;-->
-<!--                width: 100%;-->
-<!--            }-->
-
-<!--            .panel {-->
-<!--                width: 100%;-->
-<!--                min-width: 0;-->
-<!--                overflow: hidden;-->
-<!--            }-->
-
-<!--            .panel-head {-->
-<!--                max-width: 100%;-->
-<!--            }-->
-
-<!--            .about-top {-->
-<!--                min-width: 0;-->
-<!--            }-->
-
-<!--            .about-top > .panel-head {-->
-<!--                min-width: 0;-->
-<!--                max-width: calc(100% - 56px);-->
-<!--                overflow-wrap: anywhere;-->
-<!--            }-->
-
-<!--            .about p,-->
-<!--            .tagline,-->
-<!--            .tcompany,-->
-<!--            .trole,-->
-<!--            .tlist li,-->
-<!--            .p-desc,-->
-<!--            .cert-name,-->
-<!--            .cert-issuer {-->
-<!--                overflow-wrap: anywhere;-->
-<!--                word-break: break-word;-->
-<!--            }-->
-
-<!--            .contact-row {-->
-<!--                min-width: 0;-->
-<!--            }-->
-
-<!--            .contact-row > span:last-child {-->
-<!--                min-width: 0;-->
-<!--                max-width: 100%;-->
-<!--                overflow-wrap: anywhere;-->
-<!--                word-break: break-word;-->
-<!--            }-->
-
-<!--            .tools-grid {-->
-<!--                width: 100%;-->
-<!--            }-->
-
-<!--            .tool {-->
-<!--                min-width: 0;-->
-<!--            }-->
-
-<!--            .interests-row {-->
-<!--                min-width: 0;-->
-<!--            }-->
-
-<!--            .interest-badge {-->
-<!--                max-width: 100%;-->
-<!--                min-width: 0;-->
-<!--            }-->
-
-<!--            .flow {-->
-<!--                width: 100%;-->
-<!--                max-width: 100%;-->
-<!--                overflow-x: auto;-->
-<!--                overflow-y: hidden;-->
-<!--                overscroll-behavior-x: contain;-->
-<!--                -webkit-overflow-scrolling: touch;-->
-<!--                scrollbar-width: thin;-->
-<!--            }-->
-
-<!--            .timeline {-->
-<!--                min-width: 0;-->
-<!--            }-->
-
-<!--            .trow {-->
-<!--                min-width: 0;-->
-<!--            }-->
-
-<!--            .project-card {-->
-<!--                min-width: 0;-->
-<!--                width: 100%;-->
-<!--            }-->
-
-<!--            .project-card > div:last-child {-->
-<!--                min-width: 0;-->
-<!--                flex: 1 1 auto;-->
-<!--                width: 100%;-->
-<!--            }-->
-
-<!--            .p-head {-->
-<!--                min-width: 0;-->
-<!--            }-->
-
-<!--            .p-title {-->
-<!--                min-width: 0;-->
-<!--                overflow-wrap: anywhere;-->
-<!--            }-->
-
-<!--            .p-year {-->
-<!--                margin-inline-start: 0;-->
-<!--            }-->
-
-<!--            .p-link {-->
-<!--                max-width: 100%;-->
-<!--                overflow-wrap: anywhere;-->
-<!--                word-break: break-word;-->
-<!--            }-->
-
-<!--            .edu-item,-->
-<!--            .cert-item {-->
-<!--                min-width: 0;-->
-<!--            }-->
-
-<!--            .edu-item > div:last-child,-->
-<!--            .cert-item > div:nth-child(2) {-->
-<!--                min-width: 0;-->
-<!--                flex: 1 1 auto;-->
-<!--            }-->
-
-<!--            .cert-year {-->
-<!--                flex: none;-->
-<!--            }-->
-
-<!--            .caption {-->
-<!--                min-width: 0;-->
-<!--                overflow-wrap: anywhere;-->
-<!--            }-->
-
-<!--            .caption .cta {-->
-<!--                max-width: 100%;-->
-<!--            }-->
-<!--        }-->
-
-<!--        @media (max-width: 460px) {-->
-<!--            .sheet {-->
-<!--                padding-left: 12px;-->
-<!--                padding-right: 12px;-->
-<!--            }-->
-
-<!--            .panel {-->
-<!--                padding-left: 13px;-->
-<!--                padding-right: 13px;-->
-<!--            }-->
-
-<!--            .contact-row {-->
-<!--                align-items: flex-start;-->
-<!--            }-->
-
-<!--            .contact-row > span:last-child {-->
-<!--                font-size: .76rem;-->
-<!--            }-->
-
-<!--            .skill-top {-->
-<!--                min-width: 0;-->
-<!--                gap: 8px;-->
-<!--            }-->
-
-<!--            .skill-top b {-->
-<!--                min-width: 0;-->
-<!--                overflow-wrap: anywhere;-->
-<!--            }-->
-
-<!--            .tokens {-->
-<!--                flex-wrap: nowrap;-->
-<!--                max-width: 100%;-->
-<!--            }-->
-
-<!--            .project-card {-->
-<!--                box-shadow: 4px 4px 0 0 var(&#45;&#45;orange);-->
-<!--            }-->
-
-<!--            .p-head {-->
-<!--                align-items: flex-start;-->
-<!--            }-->
-
-<!--            .p-year {-->
-<!--                margin-left: auto;-->
-<!--            }-->
-
-<!--            .cert-item {-->
-<!--                align-items: flex-start;-->
-<!--                flex-wrap: wrap;-->
-<!--            }-->
-
-<!--            .cert-year {-->
-<!--                margin-inline-start: auto;-->
-<!--            }-->
-<!--        }-->
-
-<!--        @media (max-width: 360px) {-->
-<!--            .sheet {-->
-<!--                padding-left: 9px;-->
-<!--                padding-right: 9px;-->
-<!--            }-->
-
-<!--            .panel {-->
-<!--                padding-left: 11px;-->
-<!--                padding-right: 11px;-->
-<!--            }-->
-
-<!--            .stkr .fr {-->
-<!--                max-width: calc(100vw - 38px);-->
-<!--                overflow-wrap: anywhere;-->
-<!--            }-->
-
-<!--            .tokens {-->
-<!--                gap: 2px;-->
-<!--            }-->
-
-<!--            .tick {-->
-<!--                width: 12px;-->
-<!--                flex: 0 0 12px;-->
-<!--            }-->
-<!--        }-->
-
-<!--    </style>-->
+    <!--    <style>-->
+    <!--        :root {-->
+    <!--            &#45;&#45;bg: #eee7d2;-->
+    <!--            &#45;&#45;paper: #f6f1e2;-->
+    <!--            &#45;&#45;paper2: #efe8d5;-->
+    <!--            &#45;&#45;ink: #15140f;-->
+    <!--            &#45;&#45;green: #2f9e63;-->
+    <!--            &#45;&#45;orange: #e8562c;-->
+    <!--            &#45;&#45;yellow: #f4c430;-->
+    <!--            &#45;&#45;blue: #4f7de8;-->
+    <!--            &#45;&#45;muted: #6b6a58;-->
+    <!--            &#45;&#45;line: rgba(21, 20, 15, .18);-->
+    <!--            &#45;&#45;dot: rgba(21, 20, 15, .20);-->
+    <!--            &#45;&#45;mono: 'JetBrains Mono', monospace;-->
+    <!--            &#45;&#45;disp: 'Archivo Black', sans-serif;-->
+    <!--            &#45;&#45;fa: 'Vazirmatn', sans-serif;-->
+    <!--        }-->
+
+    <!--        * {-->
+    <!--            box-sizing: border-box;-->
+    <!--            margin: 0;-->
+    <!--            padding: 0;-->
+    <!--        }-->
+
+    <!--        html, body {-->
+    <!--            height: 100%;-->
+    <!--            overflow-x: hidden;-->
+    <!--        }-->
+
+    <!--        body {-->
+    <!--            background-color: var(&#45;&#45;bg);-->
+    <!--            background-image: radial-gradient(var(&#45;&#45;dot) 1.6px, transparent 1.6px);-->
+    <!--            background-size: 22px 22px;-->
+    <!--            color: var(&#45;&#45;ink);-->
+    <!--            font-family: var(&#45;&#45;fa);-->
+    <!--            min-height: 100%;-->
+    <!--        }-->
+
+    <!--        ::-webkit-scrollbar {-->
+    <!--            width: 9px;-->
+    <!--            height: 9px;-->
+    <!--        }-->
+
+    <!--        ::-webkit-scrollbar-track {-->
+    <!--            background: var(&#45;&#45;paper2);-->
+    <!--        }-->
+
+    <!--        ::-webkit-scrollbar-thumb {-->
+    <!--            background: var(&#45;&#45;ink);-->
+    <!--            border-radius: 4px;-->
+    <!--        }-->
+
+    <!--        * {-->
+    <!--            scrollbar-width: thin;-->
+    <!--            scrollbar-color: var(&#45;&#45;ink) var(&#45;&#45;paper2);-->
+    <!--        }-->
+
+    <!--        .ltr {-->
+    <!--            direction: ltr;-->
+    <!--            unicode-bidi: isolate;-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; IG-style header &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .igbar {-->
+    <!--            max-width: 1180px;-->
+    <!--            margin: 22px auto 0;-->
+    <!--            padding: 14px 20px;-->
+    <!--            background: var(&#45;&#45;ink);-->
+    <!--            color: #fff;-->
+    <!--            border-radius: 16px 16px 0 0;-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            justify-content: space-between;-->
+    <!--            position: relative;-->
+    <!--            z-index: 5;-->
+    <!--        }-->
+
+    <!--        .ig-left {-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            gap: 12px;-->
+    <!--        }-->
+
+    <!--        .ring {-->
+    <!--            width: 44px;-->
+    <!--            height: 44px;-->
+    <!--            border-radius: 50%;-->
+    <!--            padding: 2.5px;-->
+    <!--            flex: none;-->
+    <!--            background: conic-gradient(from 210deg, #ff5b5b, #ffb020, #ff2d95, #6c5ce7, #ff5b5b);-->
+    <!--        }-->
+
+    <!--        .avatar-ig {-->
+    <!--            width: 100%;-->
+    <!--            height: 100%;-->
+    <!--            border-radius: 50%;-->
+    <!--            background: var(&#45;&#45;ink);-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            justify-content: center;-->
+    <!--            overflow: hidden;-->
+    <!--        }-->
+
+    <!--        .avatar-ig #pixel-avatar {-->
+    <!--            grid-template-columns:repeat(10, 3.6px);-->
+    <!--            grid-template-rows:repeat(10, 3.6px);-->
+    <!--        }-->
+
+    <!--        .avatar-ig #pixel-avatar div {-->
+    <!--            width: 3.6px;-->
+    <!--            height: 3.6px;-->
+    <!--        }-->
+
+    <!--        .ig-left b {-->
+    <!--            font-family: var(&#45;&#45;disp);-->
+    <!--            font-size: .92rem;-->
+    <!--            letter-spacing: .5px;-->
+    <!--            direction: ltr;-->
+    <!--            display: inline-block;-->
+    <!--        }-->
+
+    <!--        .hamburger {-->
+    <!--            background: none;-->
+    <!--            border: 1px solid rgba(255, 255, 255, .35);-->
+    <!--            color: #fff;-->
+    <!--            width: 38px;-->
+    <!--            height: 34px;-->
+    <!--            border-radius: 8px;-->
+    <!--            cursor: pointer;-->
+    <!--            font-size: 16px;-->
+    <!--            position: relative;-->
+    <!--        }-->
+
+    <!--        .menu {-->
+    <!--            position: absolute;-->
+    <!--            top: 44px;-->
+    <!--            left: 20px;-->
+    <!--            background: var(&#45;&#45;ink);-->
+    <!--            color: #fff;-->
+    <!--            border-radius: 10px;-->
+    <!--            padding: 8px;-->
+    <!--            display: none;-->
+    <!--            flex-direction: column;-->
+    <!--            min-width: 170px;-->
+    <!--            box-shadow: 6px 6px 0 0 var(&#45;&#45;orange);-->
+    <!--            z-index: 20;-->
+    <!--            font-family: var(&#45;&#45;mono);-->
+    <!--            font-size: .78rem;-->
+    <!--        }-->
+
+    <!--        .menu.open {-->
+    <!--            display: flex;-->
+    <!--        }-->
+
+    <!--        .menu a {-->
+    <!--            color: #fff;-->
+    <!--            text-decoration: none;-->
+    <!--            padding: 8px 10px;-->
+    <!--            border-radius: 6px;-->
+    <!--        }-->
+
+    <!--        .menu a:hover {-->
+    <!--            background: rgba(255, 255, 255, .12);-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; sheet &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .sheet {-->
+    <!--            max-width: 1180px;-->
+    <!--            margin: 0 auto;-->
+    <!--            position: relative;-->
+    <!--            background-color: var(&#45;&#45;bg);-->
+    <!--            background-image: radial-gradient(var(&#45;&#45;dot) 1.6px, transparent 1.6px);-->
+    <!--            background-size: 22px 22px;-->
+    <!--            border: 2.5px solid var(&#45;&#45;ink);-->
+    <!--            border-top: none;-->
+    <!--            border-radius: 0 0 16px 16px;-->
+    <!--            padding: 30px 26px 8px;-->
+    <!--            overflow: hidden;-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; brand row &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .brand-row {-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            gap: 16px;-->
+    <!--            margin-bottom: 26px;-->
+    <!--            flex-wrap: wrap;-->
+    <!--        }-->
+
+    <!--        .brand-icon {-->
+    <!--            width: 58px;-->
+    <!--            height: 58px;-->
+    <!--            flex: none;-->
+    <!--            border: 2.5px solid var(&#45;&#45;ink);-->
+    <!--            border-radius: 10px;-->
+    <!--            background: var(&#45;&#45;paper);-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            justify-content: center;-->
+    <!--            transform: rotate(-4deg);-->
+    <!--            box-shadow: 5px 5px 0 0 var(&#45;&#45;orange);-->
+    <!--            color: var(&#45;&#45;ink);-->
+    <!--        }-->
+
+    <!--        .brand-icon svg {-->
+    <!--            width: 26px;-->
+    <!--            height: 26px;-->
+    <!--        }-->
+
+    <!--        .brand-name {-->
+    <!--            font-family: var(&#45;&#45;fa);-->
+    <!--            font-weight: 900;-->
+    <!--            font-size: 1.05rem;-->
+    <!--            margin-bottom: 6px;-->
+    <!--        }-->
+
+    <!--        .brand-tag {-->
+    <!--            display: inline-block;-->
+    <!--            background: var(&#45;&#45;ink);-->
+    <!--            color: #fff;-->
+    <!--            font-family: var(&#45;&#45;mono);-->
+    <!--            font-size: .68rem;-->
+    <!--            letter-spacing: 1px;-->
+    <!--            padding: 5px 10px;-->
+    <!--            border-radius: 5px;-->
+    <!--            direction: ltr;-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; reusable sticker components &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .eyebrow {-->
+    <!--            display: inline-block;-->
+    <!--            background: var(&#45;&#45;ink);-->
+    <!--            color: #fff;-->
+    <!--            font-family: var(&#45;&#45;mono);-->
+    <!--            font-size: .62rem;-->
+    <!--            letter-spacing: 2.5px;-->
+    <!--            padding: 6px 12px;-->
+    <!--            border-radius: 5px;-->
+    <!--            transform: rotate(-1deg);-->
+    <!--            margin-bottom: 10px;-->
+    <!--        }-->
+
+    <!--        .stkr {-->
+    <!--            position: relative;-->
+    <!--            display: inline-block;-->
+    <!--            margin-bottom: 6px;-->
+    <!--        }-->
+
+    <!--        .stkr .sh {-->
+    <!--            position: absolute;-->
+    <!--            inset: 0;-->
+    <!--            border-radius: 8px;-->
+    <!--            z-index: 0;-->
+    <!--        }-->
+
+    <!--        .stkr .fr {-->
+    <!--            position: relative;-->
+    <!--            z-index: 1;-->
+    <!--            background: var(&#45;&#45;ink);-->
+    <!--            color: #fff;-->
+    <!--            font-family: var(&#45;&#45;fa);-->
+    <!--            font-weight: 900;-->
+    <!--            padding: 12px 20px;-->
+    <!--            border-radius: 8px;-->
+    <!--            font-size: 1.25rem;-->
+    <!--        }-->
+
+    <!--        .stkr.g .sh {-->
+    <!--            background: var(&#45;&#45;green);-->
+    <!--            transform: translate(6px, 6px) rotate(-1deg);-->
+    <!--        }-->
+
+    <!--        .stkr.o .sh {-->
+    <!--            background: var(&#45;&#45;orange);-->
+    <!--            transform: translate(6px, 6px) rotate(1deg);-->
+    <!--        }-->
+
+    <!--        .stkr.g .fr {-->
+    <!--            transform: rotate(-1deg);-->
+    <!--        }-->
+
+    <!--        .stkr.o .fr {-->
+    <!--            transform: rotate(1deg);-->
+    <!--        }-->
+
+    <!--        .chip {-->
+    <!--            display: inline-flex;-->
+    <!--            align-items: center;-->
+    <!--            gap: 5px;-->
+    <!--            background: var(&#45;&#45;ink);-->
+    <!--            color: #fff;-->
+    <!--            font-family: var(&#45;&#45;mono);-->
+    <!--            font-size: .68rem;-->
+    <!--            letter-spacing: 1px;-->
+    <!--            padding: 5px 10px;-->
+    <!--            border-radius: 5px;-->
+    <!--            direction: ltr;-->
+    <!--        }-->
+
+    <!--        .chip.ghost {-->
+    <!--            background: var(&#45;&#45;paper);-->
+    <!--            color: var(&#45;&#45;ink);-->
+    <!--            border: 2px solid var(&#45;&#45;ink);-->
+    <!--        }-->
+
+    <!--        .burst {-->
+    <!--            display: inline-block;-->
+    <!--            background: var(&#45;&#45;yellow);-->
+    <!--            color: var(&#45;&#45;ink);-->
+    <!--            border: 2.5px solid var(&#45;&#45;ink);-->
+    <!--            font-family: var(&#45;&#45;disp);-->
+    <!--            font-size: .72rem;-->
+    <!--            letter-spacing: .5px;-->
+    <!--            padding: 6px 12px;-->
+    <!--            border-radius: 6px;-->
+    <!--            box-shadow: 4px 4px 0 0 var(&#45;&#45;ink);-->
+    <!--            transform: rotate(-2deg);-->
+    <!--            direction: ltr;-->
+    <!--        }-->
+
+    <!--        mark.hl {-->
+    <!--            background: var(&#45;&#45;yellow);-->
+    <!--            color: var(&#45;&#45;ink);-->
+    <!--            padding: 1px 6px;-->
+    <!--            border-radius: 4px;-->
+    <!--            box-decoration-break: clone;-->
+    <!--            -webkit-box-decoration-break: clone;-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; layout &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .layout {-->
+    <!--            display: grid;-->
+    <!--            grid-template-columns:296px 1fr;-->
+    <!--            gap: 20px;-->
+    <!--            padding-top: 4px;-->
+    <!--        }-->
+
+    <!--        .sidebar {-->
+    <!--            display: flex;-->
+    <!--            flex-direction: column;-->
+    <!--            gap: 18px;-->
+    <!--            padding-bottom: 22px;-->
+    <!--        }-->
+
+    <!--        .content {-->
+    <!--            display: flex;-->
+    <!--            flex-direction: column;-->
+    <!--            gap: 18px;-->
+    <!--            padding-bottom: 22px;-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; panel &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .panel {-->
+    <!--            background: var(&#45;&#45;paper);-->
+    <!--            border: 2.5px solid var(&#45;&#45;ink);-->
+    <!--            border-radius: 12px;-->
+    <!--            padding: 18px;-->
+    <!--            position: relative;-->
+    <!--            opacity: 0;-->
+    <!--            transform: translateY(16px);-->
+    <!--            transition: opacity .5s ease, transform .5s ease;-->
+    <!--        }-->
+
+    <!--        .panel.in {-->
+    <!--            opacity: 1;-->
+    <!--            transform: translateY(0);-->
+    <!--        }-->
+
+    <!--        .panel.sh-g {-->
+    <!--            box-shadow: 7px 7px 0 0 var(&#45;&#45;green);-->
+    <!--        }-->
+
+    <!--        .panel.sh-o {-->
+    <!--            box-shadow: 7px 7px 0 0 var(&#45;&#45;orange);-->
+    <!--        }-->
+
+    <!--        .panel-head {-->
+    <!--            display: inline-block;-->
+    <!--            background: var(&#45;&#45;ink);-->
+    <!--            color: #fff;-->
+    <!--            font-family: var(&#45;&#45;mono);-->
+    <!--            font-weight: 700;-->
+    <!--            font-size: .66rem;-->
+    <!--            letter-spacing: 2px;-->
+    <!--            padding: 6px 12px;-->
+    <!--            border-radius: 5px;-->
+    <!--            margin-bottom: 16px;-->
+    <!--            transform: rotate(-1deg);-->
+    <!--            box-shadow: 3px 3px 0 0 var(&#45;&#45;panel-sh, var(&#45;&#45;green));-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; profile &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .profile {-->
+    <!--            text-align: center;-->
+    <!--        }-->
+
+    <!--        .avatar-wrap {-->
+    <!--            width: 112px;-->
+    <!--            height: 112px;-->
+    <!--            margin: 0 auto 14px;-->
+    <!--            border: 2.5px solid var(&#45;&#45;ink);-->
+    <!--            border-radius: 10px;-->
+    <!--            background: var(&#45;&#45;paper2);-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            justify-content: center;-->
+    <!--            box-shadow: 6px 6px 0 0 var(&#45;&#45;orange);-->
+    <!--            transform: rotate(-2deg);-->
+    <!--            overflow: hidden;-->
+    <!--        }-->
+
+    <!--        #pixel-avatar {-->
+    <!--            display: grid;-->
+    <!--            grid-template-columns:repeat(10, 8px);-->
+    <!--            grid-template-rows:repeat(10, 8px);-->
+    <!--        }-->
+
+    <!--        #pixel-avatar div {-->
+    <!--            width: 8px;-->
+    <!--            height: 8px;-->
+    <!--        }-->
+
+    <!--        .profile h1 {-->
+    <!--            font-family: var(&#45;&#45;fa);-->
+    <!--            font-weight: 900;-->
+    <!--            font-size: 1.15rem;-->
+    <!--            margin-bottom: 8px;-->
+    <!--        }-->
+
+    <!--        .profile .role {-->
+    <!--            display: inline-block;-->
+    <!--            font-family: var(&#45;&#45;mono);-->
+    <!--            font-size: .68rem;-->
+    <!--            letter-spacing: 1px;-->
+    <!--            color: var(&#45;&#45;muted);-->
+    <!--            border: 2px solid var(&#45;&#45;ink);-->
+    <!--            border-radius: 5px;-->
+    <!--            padding: 4px 10px;-->
+    <!--            margin-bottom: 12px;-->
+    <!--        }-->
+
+    <!--        .profile hr {-->
+    <!--            border: none;-->
+    <!--            border-top: 2px dashed var(&#45;&#45;line);-->
+    <!--            margin: 12px 0;-->
+    <!--        }-->
+
+    <!--        .tagline {-->
+    <!--            font-family: var(&#45;&#45;mono);-->
+    <!--            font-size: .76rem;-->
+    <!--            color: var(&#45;&#45;ink);-->
+    <!--            text-align: right;-->
+    <!--            line-height: 1.7;-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; contact &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .contact-row {-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            gap: 10px;-->
+    <!--            padding: 8px 0;-->
+    <!--            font-size: .82rem;-->
+    <!--            border-bottom: 1px dashed var(&#45;&#45;line);-->
+    <!--        }-->
+
+    <!--        .contact-row:last-child {-->
+    <!--            border-bottom: none;-->
+    <!--        }-->
+
+    <!--        .contact-row > span:last-child {-->
+    <!--            min-width: 0;-->
+    <!--            overflow-wrap: anywhere;-->
+    <!--        }-->
+
+    <!--        .c-ic {-->
+    <!--            width: 26px;-->
+    <!--            height: 26px;-->
+    <!--            flex: none;-->
+    <!--            border-radius: 6px;-->
+    <!--            border: 2px solid var(&#45;&#45;ink);-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            justify-content: center;-->
+    <!--            background: var(&#45;&#45;paper2);-->
+    <!--            color: var(&#45;&#45;ink);-->
+    <!--        }-->
+
+    <!--        .c-ic svg {-->
+    <!--            width: 13px;-->
+    <!--            height: 13px;-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; token-meter skills &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .skill-row {-->
+    <!--            margin-bottom: 13px;-->
+    <!--        }-->
+
+    <!--        .skill-row:last-child {-->
+    <!--            margin-bottom: 0;-->
+    <!--        }-->
+
+    <!--        .skill-top {-->
+    <!--            display: flex;-->
+    <!--            justify-content: space-between;-->
+    <!--            align-items: center;-->
+    <!--            font-size: .8rem;-->
+    <!--            margin-bottom: 6px;-->
+    <!--        }-->
+
+    <!--        .skill-top b {-->
+    <!--            font-weight: 700;-->
+    <!--        }-->
+
+    <!--        .skill-top span.pct {-->
+    <!--            font-family: var(&#45;&#45;mono);-->
+    <!--            font-size: .66rem;-->
+    <!--            color: var(&#45;&#45;muted);-->
+    <!--        }-->
+
+    <!--        .tokens {-->
+    <!--            display: flex;-->
+    <!--            gap: 4px;-->
+    <!--        }-->
+
+    <!--        .tick {-->
+    <!--            width: 16px;-->
+    <!--            height: 14px;-->
+    <!--            border: 2px solid var(&#45;&#45;ink);-->
+    <!--            border-radius: 3px;-->
+    <!--            background: transparent;-->
+    <!--            transform: scale(.85);-->
+    <!--            opacity: .55;-->
+    <!--            transition: all .25s ease;-->
+    <!--        }-->
+
+    <!--        .tick.dash {-->
+    <!--            border-style: dashed;-->
+    <!--        }-->
+
+    <!--        .tick.filled {-->
+    <!--            background: var(&#45;&#45;green);-->
+    <!--            transform: scale(1);-->
+    <!--            opacity: 1;-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; tools &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .tools-grid {-->
+    <!--            display: grid;-->
+    <!--            grid-template-columns:repeat(3, 1fr);-->
+    <!--            gap: 10px;-->
+    <!--        }-->
+
+    <!--        .tool {-->
+    <!--            display: flex;-->
+    <!--            flex-direction: column;-->
+    <!--            align-items: center;-->
+    <!--            gap: 6px;-->
+    <!--            padding: 10px 4px;-->
+    <!--            border: 2px solid var(&#45;&#45;ink);-->
+    <!--            border-radius: 8px;-->
+    <!--            background: var(&#45;&#45;paper2);-->
+    <!--            font-size: .65rem;-->
+    <!--            font-weight: 600;-->
+    <!--            color: var(&#45;&#45;ink);-->
+    <!--            transition: transform .18s;-->
+    <!--        }-->
+
+    <!--        .tool:hover {-->
+    <!--            transform: translateY(-3px);-->
+    <!--        }-->
+
+    <!--        .tool-badge {-->
+    <!--            width: 30px;-->
+    <!--            height: 30px;-->
+    <!--            border-radius: 7px;-->
+    <!--            flex: none;-->
+    <!--            border: 2px solid var(&#45;&#45;ink);-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            justify-content: center;-->
+    <!--            color: var(&#45;&#45;ink);-->
+    <!--            background: var(&#45;&#45;paper);-->
+    <!--            box-shadow: 2.5px 2.5px 0 0 var(&#45;&#45;ink);-->
+    <!--        }-->
+
+    <!--        .tool-badge i {-->
+    <!--            font-size: 18px;-->
+    <!--            line-height: 1;-->
+    <!--        }-->
+
+    <!--        .tool-badge.vscode {-->
+    <!--            background: #0078d7;-->
+    <!--        }-->
+
+    <!--        .tool-badge.git {-->
+    <!--            background: #f34f29;-->
+    <!--        }-->
+
+    <!--        .tool-badge.git {-->
+    <!--            color: #ffffff;-->
+    <!--        }-->
+
+    <!--        .tool-badge.docker {-->
+    <!--            background: #cce7ff;-->
+    <!--        }-->
+
+    <!--        .tool-badge.postgresql {-->
+    <!--            background: #7839d8;-->
+    <!--        }-->
+
+    <!--        .tool-badge.redis {-->
+    <!--            background: #d82c20;-->
+    <!--        }-->
+
+    <!--        .tool-badge.redis {-->
+    <!--            color: #ffffff;-->
+    <!--        }-->
+
+
+    <!--        .tool-badge.github {-->
+    <!--            background: #040809;-->
+    <!--        }-->
+
+    <!--        .tool-badge.github {-->
+    <!--            color: #ffffff;-->
+    <!--        }-->
+    <!--        .tool-badge.jetbrains {-->
+    <!--            background: #fcf84a; /* یا رنگ دلخواه مثل #f4c430 */-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            justify-content: center;-->
+    <!--            overflow: hidden;-->
+    <!--        }-->
+
+    <!--        .tool-badge.jetbrains i {-->
+    <!--            font-size: 50px;-->
+    <!--            filter: drop-shadow(0 0 2px rgba(0,0,0,0.1));-->
+    <!--        }-->
+
+    <!--        /* اگر آیکون هنوز سیاه است، از فیلتر استفاده کنید */-->
+    <!--        .tool-badge.jetbrains i.devicon-jetbrains-plain {-->
+    <!--            /* حذف پس‌زمینه سیاه با فیلتر */-->
+    <!--            filter: brightness(0) saturate(100%) invert(0%) sepia(0%) hue-rotate(0deg) contrast(90%);-->
+    <!--        }-->
+    <!--        .tool-badge.postman {-->
+    <!--            background: #ff6c37;-->
+    <!--        }-->
+    <!--        .tool-badge.mysql {-->
+    <!--            background: #37ffe1;-->
+    <!--        }-->
+    <!--        .tool-badge.claude {-->
+    <!--            background: #d97757;-->
+    <!--            color: #fff;-->
+    <!--        }-->
+    <!--        .tool-badge.claude .ai-logo {-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            justify-content: center;-->
+    <!--        }-->
+    <!--        .tool-badge.gemini {-->
+    <!--            background: #ffffff;-->
+    <!--            color: #4285f4;-->
+    <!--        }-->
+    <!--        .tool-badge.gemini .ai-logo {-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            justify-content: center;-->
+    <!--        }-->
+    <!--        .tool-badge.chatgpt {-->
+    <!--            background: #000000;-->
+    <!--            color: #fff;-->
+    <!--        }-->
+    <!--        .tool-badge.chatgpt .ai-logo {-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            justify-content: center;-->
+    <!--        }-->
+    <!--        .tool-badge .ai-logo svg {-->
+    <!--            width: 17px;-->
+    <!--            height: 17px;-->
+    <!--            display: block;-->
+    <!--        }-->
+    <!--        .tool-badge.claude .ai-logo svg {-->
+    <!--            width: 16px;-->
+    <!--            height: 16px;-->
+    <!--        }-->
+    <!--        .tool-badge.chatgpt .ai-logo svg {-->
+    <!--            width: 16px;-->
+    <!--            height: 16px;-->
+    <!--        }-->
+    <!--        .tool-badge.claude {-->
+    <!--            padding: 0;-->
+    <!--            overflow: hidden;-->
+    <!--        }-->
+
+    <!--        .tool-badge.claude .ai-logo img {-->
+    <!--            width: 100%;-->
+    <!--            height: 100%;-->
+    <!--            object-fit: cover;-->
+    <!--            display: block;-->
+    <!--        }-->
+
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; interests &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .interests-row {-->
+    <!--            display: flex;-->
+    <!--            flex-wrap: wrap;-->
+    <!--            gap: 8px;-->
+    <!--        }-->
+
+    <!--        .interest-badge {-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            gap: 7px;-->
+    <!--            padding: 7px 12px;-->
+    <!--            border: 2px solid var(&#45;&#45;ink);-->
+    <!--            border-radius: 20px;-->
+    <!--            font-size: .72rem;-->
+    <!--            font-weight: 600;-->
+    <!--            background: var(&#45;&#45;paper2);-->
+    <!--            color: var(&#45;&#45;ink);-->
+    <!--        }-->
+
+    <!--        .interest-badge svg {-->
+    <!--            width: 13px;-->
+    <!--            height: 13px;-->
+    <!--            flex: none;-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; about &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .about-top {-->
+    <!--            display: flex;-->
+    <!--            align-items: flex-start;-->
+    <!--            justify-content: space-between;-->
+    <!--            gap: 10px;-->
+    <!--        }-->
+
+    <!--        .about-ic {-->
+    <!--            width: 46px;-->
+    <!--            height: 46px;-->
+    <!--            flex: none;-->
+    <!--            border: 2.5px solid var(&#45;&#45;ink);-->
+    <!--            border-radius: 9px;-->
+    <!--            background: var(&#45;&#45;paper2);-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            justify-content: center;-->
+    <!--            transform: rotate(3deg);-->
+    <!--            box-shadow: 4px 4px 0 0 var(&#45;&#45;green);-->
+    <!--        }-->
+
+    <!--        .about-ic svg {-->
+    <!--            width: 21px;-->
+    <!--            height: 21px;-->
+    <!--        }-->
+
+    <!--        .about p {-->
+    <!--            font-size: .92rem;-->
+    <!--            line-height: 2;-->
+    <!--            margin-top: 8px;-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; flow (experience chain) &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .flow {-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            gap: 0;-->
+    <!--            overflow-x: auto;-->
+    <!--            padding: 8px 2px 18px;-->
+    <!--            direction: ltr;-->
+    <!--        }-->
+
+    <!--        .flow-node {-->
+    <!--            flex: none;-->
+    <!--            background: var(&#45;&#45;ink);-->
+    <!--            color: #fff;-->
+    <!--            font-family: var(&#45;&#45;mono);-->
+    <!--            font-weight: 700;-->
+    <!--            font-size: .72rem;-->
+    <!--            padding: 9px 14px;-->
+    <!--            border-radius: 6px;-->
+    <!--            white-space: nowrap;-->
+    <!--        }-->
+
+    <!--        .flow-node.now {-->
+    <!--            background: var(&#45;&#45;green);-->
+    <!--            box-shadow: 3px 3px 0 0 var(&#45;&#45;ink);-->
+    <!--        }-->
+
+    <!--        .flow-dash {-->
+    <!--            flex: 1;-->
+    <!--            min-width: 26px;-->
+    <!--            height: 0;-->
+    <!--            border-top: 2.5px dashed var(&#45;&#45;ink);-->
+    <!--            margin: 0 4px;-->
+    <!--            position: relative;-->
+    <!--            top: 1px;-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; timeline &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .timeline {-->
+    <!--            position: relative;-->
+    <!--            padding-inline-start: 24px;-->
+    <!--        }-->
+
+    <!--        .timeline::before {-->
+    <!--            content: '';-->
+    <!--            position: absolute;-->
+    <!--            top: 4px;-->
+    <!--            bottom: 4px;-->
+    <!--            inset-inline-start: 6px;-->
+    <!--            width: 2.5px;-->
+    <!--            background: repeating-linear-gradient(var(&#45;&#45;ink) 0 6px, transparent 6px 12px);-->
+    <!--        }-->
+
+    <!--        .titem {-->
+    <!--            position: relative;-->
+    <!--            padding-bottom: 24px;-->
+    <!--        }-->
+
+    <!--        .titem:last-child {-->
+    <!--            padding-bottom: 0;-->
+    <!--        }-->
+
+    <!--        .titem::before {-->
+    <!--            content: '';-->
+    <!--            position: absolute;-->
+    <!--            top: 2px;-->
+    <!--            inset-inline-start: -24px;-->
+    <!--            width: 13px;-->
+    <!--            height: 13px;-->
+    <!--            border-radius: 3px;-->
+    <!--            background: var(&#45;&#45;green);-->
+    <!--            border: 2px solid var(&#45;&#45;ink);-->
+    <!--        }-->
+
+    <!--        .trow {-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            gap: 8px;-->
+    <!--            flex-wrap: wrap;-->
+    <!--            margin-bottom: 6px;-->
+    <!--        }-->
+
+    <!--        .trole {-->
+    <!--            font-size: .98rem;-->
+    <!--            font-weight: 800;-->
+    <!--        }-->
+
+    <!--        .tcompany {-->
+    <!--            font-size: .78rem;-->
+    <!--            color: var(&#45;&#45;muted);-->
+    <!--            margin-bottom: 8px;-->
+    <!--        }-->
+
+    <!--        .tlist {-->
+    <!--            list-style: none;-->
+    <!--            display: flex;-->
+    <!--            flex-direction: column;-->
+    <!--            gap: 5px;-->
+    <!--        }-->
+
+    <!--        .tlist li {-->
+    <!--            font-size: .82rem;-->
+    <!--            position: relative;-->
+    <!--            padding-inline-start: 16px;-->
+    <!--        }-->
+
+    <!--        .tlist li::before {-->
+    <!--            content: '▪';-->
+    <!--            position: absolute;-->
+    <!--            inset-inline-start: 0;-->
+    <!--            color: var(&#45;&#45;orange);-->
+    <!--            font-size: .6rem;-->
+    <!--            top: 4px;-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; projects &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .project-card {-->
+    <!--            display: flex;-->
+    <!--            gap: 14px;-->
+    <!--            padding: 14px;-->
+    <!--            border: 2.5px solid var(&#45;&#45;ink);-->
+    <!--            border-radius: 10px;-->
+    <!--            background: var(&#45;&#45;paper2);-->
+    <!--            margin-bottom: 14px;-->
+    <!--            position: relative;-->
+    <!--            box-shadow: 6px 6px 0 0 var(&#45;&#45;orange);-->
+    <!--            transition: transform .18s;-->
+    <!--        }-->
+
+    <!--        .project-card:last-child {-->
+    <!--            margin-bottom: 0;-->
+    <!--        }-->
+
+    <!--        .project-card:hover {-->
+    <!--            transform: translate(-2px, -2px);-->
+    <!--        }-->
+
+    <!--        .p-icon {-->
+    <!--            width: 44px;-->
+    <!--            height: 44px;-->
+    <!--            flex: none;-->
+    <!--            border-radius: 9px;-->
+    <!--            border: 2.5px solid var(&#45;&#45;ink);-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            justify-content: center;-->
+    <!--            background: var(&#45;&#45;paper);-->
+    <!--            color: var(&#45;&#45;ink);-->
+    <!--        }-->
+
+    <!--        .p-icon svg {-->
+    <!--            width: 20px;-->
+    <!--            height: 20px;-->
+    <!--        }-->
+
+    <!--        .p-head {-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            gap: 8px;-->
+    <!--            flex-wrap: wrap;-->
+    <!--            margin-bottom: 6px;-->
+    <!--        }-->
+
+    <!--        .p-title {-->
+    <!--            font-weight: 800;-->
+    <!--            font-size: .95rem;-->
+    <!--        }-->
+
+    <!--        .p-tag {-->
+    <!--            font-family: var(&#45;&#45;mono);-->
+    <!--            font-size: .62rem;-->
+    <!--            font-weight: 700;-->
+    <!--            padding: 3px 8px;-->
+    <!--            border-radius: 5px;-->
+    <!--            background: var(&#45;&#45;ink);-->
+    <!--            color: #fff;-->
+    <!--            direction: ltr;-->
+    <!--        }-->
+
+    <!--        .p-year {-->
+    <!--            margin-inline-start: auto;-->
+    <!--            font-family: var(&#45;&#45;mono);-->
+    <!--            font-size: .72rem;-->
+    <!--            color: var(&#45;&#45;muted);-->
+    <!--            direction: ltr;-->
+    <!--        }-->
+
+    <!--        .p-desc {-->
+    <!--            font-size: .82rem;-->
+    <!--            color: var(&#45;&#45;muted);-->
+    <!--            line-height: 1.8;-->
+    <!--            margin-bottom: 8px;-->
+    <!--        }-->
+
+    <!--        .p-link {-->
+    <!--            font-family: var(&#45;&#45;mono);-->
+    <!--            font-size: .74rem;-->
+    <!--            color: var(&#45;&#45;ink);-->
+    <!--            font-weight: 700;-->
+    <!--            text-decoration: underline;-->
+    <!--            direction: ltr;-->
+    <!--            display: inline-block;-->
+    <!--        }-->
+
+    <!--        .p-feat {-->
+    <!--            position: absolute;-->
+    <!--            top: -12px;-->
+    <!--            left: -10px;-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; edu / certs &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .edu-item, .cert-item {-->
+    <!--            display: flex;-->
+    <!--            gap: 14px;-->
+    <!--            align-items: flex-start;-->
+    <!--        }-->
+
+    <!--        .cert-item {-->
+    <!--            margin-bottom: 14px;-->
+    <!--        }-->
+
+    <!--        .cert-item:last-child {-->
+    <!--            margin-bottom: 0;-->
+    <!--        }-->
+
+    <!--        .cert-badge {-->
+    <!--            width: 36px;-->
+    <!--            height: 36px;-->
+    <!--            flex: none;-->
+    <!--            border-radius: 8px;-->
+    <!--            border: 2.5px solid var(&#45;&#45;ink);-->
+    <!--            display: flex;-->
+    <!--            align-items: center;-->
+    <!--            justify-content: center;-->
+    <!--            font-family: var(&#45;&#45;mono);-->
+    <!--            font-weight: 800;-->
+    <!--            font-size: 12px;-->
+    <!--            color: var(&#45;&#45;ink);-->
+    <!--            background: var(&#45;&#45;tc2, var(&#45;&#45;yellow));-->
+    <!--            box-shadow: 3px 3px 0 0 var(&#45;&#45;ink);-->
+    <!--        }-->
+
+    <!--        .cert-badge svg {-->
+    <!--            width: 17px;-->
+    <!--            height: 17px;-->
+    <!--        }-->
+
+    <!--        .cert-name {-->
+    <!--            font-weight: 800;-->
+    <!--            font-size: .88rem;-->
+    <!--        }-->
+
+    <!--        .cert-issuer {-->
+    <!--            font-size: .75rem;-->
+    <!--            color: var(&#45;&#45;muted);-->
+    <!--        }-->
+
+    <!--        .cert-year {-->
+    <!--            margin-inline-start: auto;-->
+    <!--            font-family: var(&#45;&#45;mono);-->
+    <!--            font-size: .72rem;-->
+    <!--            color: var(&#45;&#45;muted);-->
+    <!--            direction: ltr;-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; footer / caption &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        .caption {-->
+    <!--            border-top: 2.5px dashed var(&#45;&#45;line);-->
+    <!--            margin-top: 6px;-->
+    <!--            padding: 26px 4px 30px;-->
+    <!--            text-align: center;-->
+    <!--            font-family: var(&#45;&#45;fa);-->
+    <!--            font-weight: 700;-->
+    <!--            font-size: 1.05rem;-->
+    <!--            line-height: 2.1;-->
+    <!--            position: relative;-->
+    <!--        }-->
+
+    <!--        .caption .cta {-->
+    <!--            position: absolute;-->
+    <!--            bottom: -4px;-->
+    <!--            left: 6px;-->
+    <!--            font-family: var(&#45;&#45;disp);-->
+    <!--            font-size: .62rem;-->
+    <!--            background: var(&#45;&#45;yellow);-->
+    <!--            color: var(&#45;&#45;ink);-->
+    <!--            border: 2.5px solid var(&#45;&#45;ink);-->
+    <!--            padding: 6px 10px;-->
+    <!--            border-radius: 6px;-->
+    <!--            box-shadow: 3px 3px 0 0 var(&#45;&#45;ink);-->
+    <!--            transform: rotate(-3deg);-->
+    <!--            direction: ltr;-->
+    <!--        }-->
+
+    <!--        @media (max-width: 980px) {-->
+    <!--            .layout {-->
+    <!--                grid-template-columns:1fr;-->
+    <!--            }-->
+
+    <!--            .sheet {-->
+    <!--                padding: 24px 18px 8px;-->
+    <!--            }-->
+
+    <!--            .caption .cta {-->
+    <!--                position: static;-->
+    <!--                display: inline-block;-->
+    <!--                margin-top: 14px;-->
+    <!--            }-->
+    <!--        }-->
+
+    <!--        @media (max-width: 680px) {-->
+    <!--            .igbar {-->
+    <!--                padding: 11px 14px;-->
+    <!--                border-radius: 14px 14px 0 0;-->
+    <!--                margin-top: 14px;-->
+    <!--            }-->
+
+    <!--            .ring {-->
+    <!--                width: 38px;-->
+    <!--                height: 38px;-->
+    <!--            }-->
+
+    <!--            .avatar-ig #pixel-avatar {-->
+    <!--                grid-template-columns:repeat(10, 3.1px);-->
+    <!--                grid-template-rows:repeat(10, 3.1px);-->
+    <!--            }-->
+
+    <!--            .avatar-ig #pixel-avatar div {-->
+    <!--                width: 3.1px;-->
+    <!--                height: 3.1px;-->
+    <!--            }-->
+
+    <!--            .ig-left b {-->
+    <!--                font-size: .8rem;-->
+    <!--            }-->
+
+    <!--            .hamburger {-->
+    <!--                width: 34px;-->
+    <!--                height: 32px;-->
+    <!--                font-size: 14px;-->
+    <!--            }-->
+
+    <!--            .sheet {-->
+    <!--                padding: 20px 14px 6px;-->
+    <!--                border-radius: 0 0 14px 14px;-->
+    <!--            }-->
+
+    <!--            .brand-row {-->
+    <!--                gap: 12px;-->
+    <!--                margin-bottom: 20px;-->
+    <!--            }-->
+
+    <!--            .brand-icon {-->
+    <!--                width: 48px;-->
+    <!--                height: 48px;-->
+    <!--            }-->
+
+    <!--            .brand-icon svg {-->
+    <!--                width: 22px;-->
+    <!--                height: 22px;-->
+    <!--            }-->
+
+    <!--            .brand-name {-->
+    <!--                font-size: .95rem;-->
+    <!--            }-->
+
+    <!--            .hero {-->
+    <!--                margin-bottom: 20px;-->
+    <!--            }-->
+
+    <!--            .stkr .fr {-->
+    <!--                font-size: 1.02rem;-->
+    <!--                padding: 10px 16px;-->
+    <!--            }-->
+
+    <!--            .panel {-->
+    <!--                padding: 15px;-->
+    <!--            }-->
+
+    <!--            .panel-head {-->
+    <!--                font-size: .6rem;-->
+    <!--                padding: 5px 10px;-->
+    <!--                margin-bottom: 13px;-->
+    <!--            }-->
+
+    <!--            .tools-grid {-->
+    <!--                grid-template-columns:repeat(3, 1fr);-->
+    <!--                gap: 8px;-->
+    <!--            }-->
+
+    <!--            .tool {-->
+    <!--                font-size: .6rem;-->
+    <!--                padding: 8px 3px;-->
+    <!--            }-->
+
+    <!--            .flow-node {-->
+    <!--                font-size: .66rem;-->
+    <!--                padding: 8px 11px;-->
+    <!--            }-->
+
+    <!--            .project-card {-->
+    <!--                padding: 12px;-->
+    <!--                gap: 11px;-->
+    <!--            }-->
+
+    <!--            .p-icon {-->
+    <!--                width: 38px;-->
+    <!--                height: 38px;-->
+    <!--            }-->
+
+    <!--            .p-icon svg {-->
+    <!--                width: 17px;-->
+    <!--                height: 17px;-->
+    <!--            }-->
+
+    <!--            .caption {-->
+    <!--                font-size: .92rem;-->
+    <!--                line-height: 1.9;-->
+    <!--                padding: 22px 2px 26px;-->
+    <!--            }-->
+    <!--        }-->
+
+    <!--        @media (max-width: 460px) {-->
+    <!--            .ig-left b {-->
+    <!--                display: none;-->
+    <!--            }-->
+
+    <!--            .brand-row {-->
+    <!--                flex-wrap: nowrap;-->
+    <!--            }-->
+
+    <!--            .brand-icon {-->
+    <!--                transform: rotate(-3deg);-->
+    <!--                box-shadow: 4px 4px 0 0 var(&#45;&#45;orange);-->
+    <!--            }-->
+
+    <!--            .stkr .sh {-->
+    <!--                transform: translate(4px, 4px) rotate(-1deg) !important;-->
+    <!--            }-->
+
+    <!--            .stkr .fr {-->
+    <!--                font-size: .88rem;-->
+    <!--                padding: 9px 13px;-->
+    <!--            }-->
+
+    <!--            .eyebrow {-->
+    <!--                font-size: .56rem;-->
+    <!--                letter-spacing: 1.6px;-->
+    <!--                padding: 5px 9px;-->
+    <!--            }-->
+
+    <!--            .avatar-wrap {-->
+    <!--                width: 92px;-->
+    <!--                height: 92px;-->
+    <!--            }-->
+
+    <!--            #pixel-avatar {-->
+    <!--                grid-template-columns:repeat(10, 6.6px);-->
+    <!--                grid-template-rows:repeat(10, 6.6px);-->
+    <!--            }-->
+
+    <!--            #pixel-avatar div {-->
+    <!--                width: 6.6px;-->
+    <!--                height: 6.6px;-->
+    <!--            }-->
+
+    <!--            .profile h1 {-->
+    <!--                font-size: 1rem;-->
+    <!--            }-->
+
+    <!--            .tools-grid {-->
+    <!--                grid-template-columns:repeat(2, 1fr);-->
+    <!--            }-->
+
+    <!--            .project-card {-->
+    <!--                flex-direction: column;-->
+    <!--            }-->
+
+    <!--            .p-icon {-->
+    <!--                width: 34px;-->
+    <!--                height: 34px;-->
+    <!--            }-->
+
+    <!--            .p-feat {-->
+    <!--                position: static;-->
+    <!--                display: inline-block;-->
+    <!--                margin-bottom: 8px;-->
+    <!--            }-->
+
+    <!--            .tick {-->
+    <!--                width: 13px;-->
+    <!--                height: 12px;-->
+    <!--            }-->
+
+    <!--            .flow-node {-->
+    <!--                font-size: .6rem;-->
+    <!--                padding: 7px 9px;-->
+    <!--            }-->
+
+    <!--            .cert-item, .edu-item {-->
+    <!--                gap: 10px;-->
+    <!--            }-->
+
+    <!--            .cert-badge {-->
+    <!--                width: 32px;-->
+    <!--                height: 32px;-->
+    <!--            }-->
+
+    <!--            .caption {-->
+    <!--                font-size: .85rem;-->
+    <!--            }-->
+    <!--        }-->
+
+    <!--        @media (prefers-reduced-motion: reduce) {-->
+    <!--            * {-->
+    <!--                animation: none !important;-->
+    <!--                transition: none !important;-->
+    <!--            }-->
+    <!--        }-->
+
+    <!--        /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; mobile responsiveness overrides &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+    <!--        @media (max-width: 680px) {-->
+    <!--            html, body {-->
+    <!--                width: 100%;-->
+    <!--                max-width: 100%;-->
+    <!--                overflow-x: hidden;-->
+    <!--            }-->
+
+    <!--            .igbar,-->
+    <!--            .sheet {-->
+    <!--                width: 100%;-->
+    <!--                max-width: 100%;-->
+    <!--            }-->
+
+    <!--            .igbar {-->
+    <!--                margin-left: 0;-->
+    <!--                margin-right: 0;-->
+    <!--            }-->
+
+    <!--            .sheet {-->
+    <!--                margin-left: 0;-->
+    <!--                margin-right: 0;-->
+    <!--            }-->
+
+    <!--            .layout {-->
+    <!--                width: 100%;-->
+    <!--                min-width: 0;-->
+    <!--                grid-template-columns:minmax(0, 1fr);-->
+    <!--            }-->
+
+    <!--            .sidebar,-->
+    <!--            .content {-->
+    <!--                min-width: 0;-->
+    <!--                width: 100%;-->
+    <!--            }-->
+
+    <!--            .panel {-->
+    <!--                width: 100%;-->
+    <!--                min-width: 0;-->
+    <!--                overflow: hidden;-->
+    <!--            }-->
+
+    <!--            .panel-head {-->
+    <!--                max-width: 100%;-->
+    <!--            }-->
+
+    <!--            .about-top {-->
+    <!--                min-width: 0;-->
+    <!--            }-->
+
+    <!--            .about-top > .panel-head {-->
+    <!--                min-width: 0;-->
+    <!--                max-width: calc(100% - 56px);-->
+    <!--                overflow-wrap: anywhere;-->
+    <!--            }-->
+
+    <!--            .about p,-->
+    <!--            .tagline,-->
+    <!--            .tcompany,-->
+    <!--            .trole,-->
+    <!--            .tlist li,-->
+    <!--            .p-desc,-->
+    <!--            .cert-name,-->
+    <!--            .cert-issuer {-->
+    <!--                overflow-wrap: anywhere;-->
+    <!--                word-break: break-word;-->
+    <!--            }-->
+
+    <!--            .contact-row {-->
+    <!--                min-width: 0;-->
+    <!--            }-->
+
+    <!--            .contact-row > span:last-child {-->
+    <!--                min-width: 0;-->
+    <!--                max-width: 100%;-->
+    <!--                overflow-wrap: anywhere;-->
+    <!--                word-break: break-word;-->
+    <!--            }-->
+
+    <!--            .tools-grid {-->
+    <!--                width: 100%;-->
+    <!--            }-->
+
+    <!--            .tool {-->
+    <!--                min-width: 0;-->
+    <!--            }-->
+
+    <!--            .interests-row {-->
+    <!--                min-width: 0;-->
+    <!--            }-->
+
+    <!--            .interest-badge {-->
+    <!--                max-width: 100%;-->
+    <!--                min-width: 0;-->
+    <!--            }-->
+
+    <!--            .flow {-->
+    <!--                width: 100%;-->
+    <!--                max-width: 100%;-->
+    <!--                overflow-x: auto;-->
+    <!--                overflow-y: hidden;-->
+    <!--                overscroll-behavior-x: contain;-->
+    <!--                -webkit-overflow-scrolling: touch;-->
+    <!--                scrollbar-width: thin;-->
+    <!--            }-->
+
+    <!--            .timeline {-->
+    <!--                min-width: 0;-->
+    <!--            }-->
+
+    <!--            .trow {-->
+    <!--                min-width: 0;-->
+    <!--            }-->
+
+    <!--            .project-card {-->
+    <!--                min-width: 0;-->
+    <!--                width: 100%;-->
+    <!--            }-->
+
+    <!--            .project-card > div:last-child {-->
+    <!--                min-width: 0;-->
+    <!--                flex: 1 1 auto;-->
+    <!--                width: 100%;-->
+    <!--            }-->
+
+    <!--            .p-head {-->
+    <!--                min-width: 0;-->
+    <!--            }-->
+
+    <!--            .p-title {-->
+    <!--                min-width: 0;-->
+    <!--                overflow-wrap: anywhere;-->
+    <!--            }-->
+
+    <!--            .p-year {-->
+    <!--                margin-inline-start: 0;-->
+    <!--            }-->
+
+    <!--            .p-link {-->
+    <!--                max-width: 100%;-->
+    <!--                overflow-wrap: anywhere;-->
+    <!--                word-break: break-word;-->
+    <!--            }-->
+
+    <!--            .edu-item,-->
+    <!--            .cert-item {-->
+    <!--                min-width: 0;-->
+    <!--            }-->
+
+    <!--            .edu-item > div:last-child,-->
+    <!--            .cert-item > div:nth-child(2) {-->
+    <!--                min-width: 0;-->
+    <!--                flex: 1 1 auto;-->
+    <!--            }-->
+
+    <!--            .cert-year {-->
+    <!--                flex: none;-->
+    <!--            }-->
+
+    <!--            .caption {-->
+    <!--                min-width: 0;-->
+    <!--                overflow-wrap: anywhere;-->
+    <!--            }-->
+
+    <!--            .caption .cta {-->
+    <!--                max-width: 100%;-->
+    <!--            }-->
+    <!--        }-->
+
+    <!--        @media (max-width: 460px) {-->
+    <!--            .sheet {-->
+    <!--                padding-left: 12px;-->
+    <!--                padding-right: 12px;-->
+    <!--            }-->
+
+    <!--            .panel {-->
+    <!--                padding-left: 13px;-->
+    <!--                padding-right: 13px;-->
+    <!--            }-->
+
+    <!--            .contact-row {-->
+    <!--                align-items: flex-start;-->
+    <!--            }-->
+
+    <!--            .contact-row > span:last-child {-->
+    <!--                font-size: .76rem;-->
+    <!--            }-->
+
+    <!--            .skill-top {-->
+    <!--                min-width: 0;-->
+    <!--                gap: 8px;-->
+    <!--            }-->
+
+    <!--            .skill-top b {-->
+    <!--                min-width: 0;-->
+    <!--                overflow-wrap: anywhere;-->
+    <!--            }-->
+
+    <!--            .tokens {-->
+    <!--                flex-wrap: nowrap;-->
+    <!--                max-width: 100%;-->
+    <!--            }-->
+
+    <!--            .project-card {-->
+    <!--                box-shadow: 4px 4px 0 0 var(&#45;&#45;orange);-->
+    <!--            }-->
+
+    <!--            .p-head {-->
+    <!--                align-items: flex-start;-->
+    <!--            }-->
+
+    <!--            .p-year {-->
+    <!--                margin-left: auto;-->
+    <!--            }-->
+
+    <!--            .cert-item {-->
+    <!--                align-items: flex-start;-->
+    <!--                flex-wrap: wrap;-->
+    <!--            }-->
+
+    <!--            .cert-year {-->
+    <!--                margin-inline-start: auto;-->
+    <!--            }-->
+    <!--        }-->
+
+    <!--        @media (max-width: 360px) {-->
+    <!--            .sheet {-->
+    <!--                padding-left: 9px;-->
+    <!--                padding-right: 9px;-->
+    <!--            }-->
+
+    <!--            .panel {-->
+    <!--                padding-left: 11px;-->
+    <!--                padding-right: 11px;-->
+    <!--            }-->
+
+    <!--            .stkr .fr {-->
+    <!--                max-width: calc(100vw - 38px);-->
+    <!--                overflow-wrap: anywhere;-->
+    <!--            }-->
+
+    <!--            .tokens {-->
+    <!--                gap: 2px;-->
+    <!--            }-->
+
+    <!--            .tick {-->
+    <!--                width: 12px;-->
+    <!--                flex: 0 0 12px;-->
+    <!--            }-->
+    <!--        }-->
+
+    <!--    </style>-->
 </head>
 <body>
 
@@ -1595,22 +1595,50 @@
                 <h1>ابوالفضل ولیان</h1>
                 <div class="role ltr">BACKEND DEVELOPER</div>
                 <hr>
-                <div class="tagline">&gt; ایده‌ها را با کد به واقعیت تبدیل می‌کنم.</div>
+                <div class="tagline age">&gt; Age : 18</div>
             </div>
 
             <div class="panel sh-g">
                 <div class="panel-head" style="--panel-sh:var(--orange)">CONTACT</div>
-                <div class="contact-row"><span class="c-ic" data-icon="mail"></span><span class="ltr">abolfazlvalian054@gmail.com
-</span></div>
-                <div class="contact-row"><span class="c-ic" data-icon="phone"></span><span
-                        class="ltr">+98 910 674 4773</span></div>
-                <div class="contact-row"><span class="c-ic" data-icon="pin"></span><span>تهران، ایران</span></div>
-                <div class="contact-row"><span class="c-ic" data-icon="globe"></span><span class="ltr">abolfazl-valiyan.github.io</span>
+
+                <a class="contact-row contact-link" href="mailto:abolfazlvalian054@gmail.com">
+                    <span class="c-ic" data-icon="mail"></span>
+                    <span class="ltr">abolfazlvalian054@gmail.com</span>
+                </a>
+
+                <a class="contact-row contact-link" href="tel:+989106744773">
+                    <span class="c-ic" data-icon="phone"></span>
+                    <span class="ltr">+98 910 674 4773</span>
+                </a>
+
+                <div class="contact-row">
+                    <span class="c-ic" data-icon="pin"></span>
+                    <span>تهران، ایران</span>
                 </div>
-                <div class="contact-row"><span class="c-ic" data-icon="github"></span><span class="ltr">github.com/abolfazl-valiyan</span>
-                </div>
-                <div class="contact-row"><span class="c-ic" data-icon="linkedin"></span><span class="ltr">linkedin.com/in/abolfazl-valian-806839416</span>
-                </div>
+
+                <a class="contact-row contact-link"
+                   href="https://abolfazl-valiyan.github.io/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span class="c-ic" data-icon="globe"></span>
+                    <span class="ltr">abolfazl-valiyan.github.io</span>
+                </a>
+
+                <a class="contact-row contact-link"
+                   href="https://github.com/abolfazl-valiyan"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span class="c-ic" data-icon="github"></span>
+                    <span class="ltr">github.com/abolfazl-valiyan</span>
+                </a>
+
+                <a class="contact-row contact-link"
+                   href="https://linkedin.com/in/abolfazl-valian-806839416"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span class="c-ic" data-icon="linkedin"></span>
+                    <span class="ltr">linkedin.com/in/abolfazl-valian-806839416</span>
+                </a>
             </div>
 
             <div class="panel sh-o">
@@ -1740,7 +1768,8 @@
                                 <stop offset="100%" stop-color="#f9ab00"/>
                             </linearGradient>
                         </defs>
-                        <path fill="url(#geminiGrad)" d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2 Z"/>
+                        <path fill="url(#geminiGrad)"
+                              d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2 Z"/>
                     </svg>
                 </span>
             </span>
@@ -1793,11 +1822,15 @@
                     <div class="panel-head" style="--panel-sh:var(--green)">ABOUT ME</div>
                     <div class="about-ic" data-icon="monitor"></div>
                 </div>
-                <p>توسعه‌دهنده نرم‌افزار با تجربه در ساخت اپلیکیشن‌های وب مدرن و حل مسائل چالش‌برانگیز. به
-                    <mark class="hl">کدنویسی تمیز</mark>
-                    ، سیستم‌های کارآمد و یادگیری مستمر علاقه‌مندم و همیشه آماده‌ام ایده‌ها را به
-                    <mark class="hl">راهکارهای واقعی</mark>
-                    تبدیل کنم.
+                <p> توسعه‌دهنده بک‌اند با تمرکز بر
+                    <mark class="hl">Python و Django</mark>
+                    ، با علاقه به طراحی API، معماری نرم‌افزار و ساخت سیستم‌های قابل اعتماد و مقیاس‌پذیر. در حال توسعه
+                    دانش خود در حوزه
+                    <mark class="hl">هوش مصنوعی و زیرشاخه‌های آن، به‌ویژه Machine Learning</mark>
+                    ، و همچنین یادگیری و توسعه مهارت در زمینه
+                    <mark class="hl">Blockchain Development</mark>
+                    هستم.
+
                 </p>
             </section>
 
@@ -1805,47 +1838,50 @@
                 <div class="panel-head" style="--panel-sh:var(--orange)">EXPERIENCE</div>
 
                 <div class="flow">
-                    <div class="flow-node">JUNIOR · 2020</div>
+                    <div class="flow-node">INTERN . 1404</div>
                     <div class="flow-dash"></div>
-                    <div class="flow-node">FRONTEND · 2021</div>
+                    <div class="flow-node">INTERN . 1405</div>
                     <div class="flow-dash"></div>
-                    <div class="flow-node">SENIOR · 2023</div>
-                    <div class="flow-dash"></div>
-                    <div class="flow-node now">NOW</div>
+                    <div class="flow-node now">JUNIOR · 1405</div>
                 </div>
 
                 <div class="timeline">
+
+                    <!-- Huber -->
                     <div class="titem">
-                        <div class="trow"><span class="chip">2023 — PRESENT</span><span class="burst">CURRENT</span>
+                        <div class="trow">
+                            <span class="chip">1405 — PRESENT</span>
+                            <span class="burst">CURRENT</span>
                         </div>
-                        <div class="trole">توسعه‌دهنده ارشد فرانت‌اند</div>
-                        <div class="tcompany">TechNova Solutions</div>
+
+                        <div class="trole">توسعه دهنده جونیور بک‌اند</div>
+                        <div class="tcompany">شرکت هوبر</div>
+
                         <ul class="tlist">
-                            <li>توسعه و نگهداری اپلیکیشن‌های وب با React، Next.js و TypeScript</li>
-                            <li>همکاری با تیم‌های مختلف برای تحویل محصولات باکیفیت</li>
-                            <li>بهبود کارایی و مقیاس‌پذیری اپلیکیشن‌های موجود</li>
+                            <li>توسعه و پیاده‌سازی سرویس‌های بک‌اند با Python و Django</li>
+                            <li>طراحی و توسعه REST API و اتصال سرویس‌های مختلف به یکدیگر</li>
+                            <li>کار با پایگاه‌های داده و بهینه‌سازی ساختار و عملکرد آن‌ها</li>
+                            <li>استفاده از Git و Docker در فرآیند توسعه و مدیریت پروژه</li>
                         </ul>
                     </div>
+
+                    <!-- Imam Khomeini -->
                     <div class="titem">
-                        <div class="trow"><span class="chip ghost">2021 — 2023</span></div>
-                        <div class="trole">توسعه‌دهنده فرانت‌اند</div>
-                        <div class="tcompany">CodeCraft Studio</div>
+                        <div class="trow">
+                            <span class="chip ghost">1404 - 1405</span>
+                        </div>
+
+                        <div class="trole">توسعه دهنده کارآموز بک‌اند</div>
+                        <div class="tcompany">شرکت امام خمینی</div>
+
                         <ul class="tlist">
-                            <li>ساخت رابط‌های کاربری واکنش‌گرا با React و Tailwind CSS</li>
-                            <li>یکپارچه‌سازی API‌های RESTful و بهینه‌سازی عملکرد</li>
-                            <li>مشارکت در بازبینی کد و ارتقای کیفیت آن</li>
+                            <li>یادگیری و توسعه مهارت‌های بک‌اند با Python و Django</li>
+                            <li>مشارکت در توسعه و پیاده‌سازی APIهای وب</li>
+                            <li>کار با پایگاه داده و انجام عملیات CRUD</li>
+                            <li>آشنایی با Git، ساختار پروژه و فرآیند توسعه نرم‌افزار</li>
                         </ul>
                     </div>
-                    <div class="titem">
-                        <div class="trow"><span class="chip ghost">2020 — 2021</span></div>
-                        <div class="trole">توسعه‌دهنده جونیور</div>
-                        <div class="tcompany">WebGenius Agency</div>
-                        <ul class="tlist">
-                            <li>کار روی پروژه‌های مختلف مشتریان با JavaScript و PHP</li>
-                            <li>رفع باگ‌ها و پیاده‌سازی ویژگی‌های جدید</li>
-                            <li>کسب تجربه در کنترل نسخه و روش‌های چابک</li>
-                        </ul>
-                    </div>
+
                 </div>
             </section>
 
@@ -1892,9 +1928,9 @@
                 <div class="edu-item">
                     <div class="cert-badge" data-icon="cap" style="--tc2:#a8e6a1"></div>
                     <div>
-                        <div class="chip ghost" style="margin-bottom:6px;">2016 — 2020</div>
-                        <div class="cert-name">کارشناسی مهندسی کامپیوتر</div>
-                        <div class="cert-issuer">دانشگاه صنعتی شریف</div>
+                        <div class="chip ghost" style="margin-bottom:6px;">1402 — 1405</div>
+                        <div class="cert-name">دیپلم کامپیوتر </div>
+                        <div class="cert-issuer">مدرسه انفورماتیک تهران </div>
                     </div>
                 </div>
             </section>
