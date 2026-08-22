@@ -2,6 +2,38 @@
 (function () {
     const S = 'stroke="currentColor" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"';
     const ICONS = {
+        social: `<svg viewBox="0 0 24 24" ${S}>
+    <circle cx="7" cy="8" r="2.5"/>
+    <circle cx="17" cy="7" r="2.5"/>
+    <circle cx="12" cy="17" r="2.5"/>
+    <path d="M9.2 9.2l1.8 5.3M14.8 9l-1.8 5.5M9.5 8.3l5 .1"/>
+</svg>`,
+        hotel: `<svg viewBox="0 0 24 24" ${S}>
+    <path d="M4 21V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v15"/>
+    <path d="M2 21h20"/>
+    <path d="M8 8h2M14 8h2M8 12h2M14 12h2M8 16h2M14 16h2"/>
+    <path d="M10 21v-3h4v3"/>
+</svg>`,
+        voice: `<svg viewBox="0 0 24 24" ${S}>
+    <rect x="8" y="3" width="8" height="12" rx="4"/>
+    <path d="M5 11a7 7 0 0 0 14 0"/>
+    <path d="M12 18v3"/>
+    <path d="M8.5 21h7"/>
+</svg>`,
+        car: `<svg viewBox="0 0 24 24" ${S}>
+    <path d="M5 16.5h14l1-5.5H4l1 5.5z"/>
+    <path d="M6.5 11 8 7.5h8l1.5 3.5"/>
+    <path d="M4 16.5v2.2"/>
+    <path d="M20 16.5v2.2"/>
+    <circle cx="7.5" cy="17.5" r="1.7"/>
+    <circle cx="16.5" cy="17.5" r="1.7"/>
+    <path d="M6 13.5h2M16 13.5h2"/>
+</svg>`,
+        money: `<svg viewBox="0 0 24 24" ${S}>
+    <circle cx="12" cy="12" r="8.5"/>
+    <path d="M14.5 9.2c-.6-.7-1.5-1.1-2.6-1.1-1.4 0-2.4.7-2.4 1.7 0 2.7 5.1 1.2 5.1 3.8 0 1-.9 1.8-2.5 1.8-1.2 0-2.2-.4-2.9-1.2"/>
+    <path d="M12 6.5v11"/>
+</svg>`,
         linkedin: `<svg viewBox="0 0 24 24" ${S}><path d="M5 8.5V19M5 5.2v.1M9 19v-6a4 4 0 0 1 8 0v6M9 13V8.5M17 19v-6"/></svg>`,
         github: `<svg viewBox="0 0 24 24" ${S}><path d="M12 2.5a9.5 9.5 0 0 0-3 18.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.4-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.8 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.5 9.5 0 0 1 5.1 0c2-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.7-2.3 4.5-4.5 4.8.4.3.7.9.7 1.8v2.7c0 .3.2.6.7.5A9.5 9.5 0 0 0 12 2.5z"/></svg>`,
         spark: `<svg viewBox="0 0 24 24" ${S}><path d="M12 2v6M12 16v6M2 12h6M16 12h6M5 5l4 4M15 15l4 4M19 5l-4 4M9 15l-4 4"/></svg>`,

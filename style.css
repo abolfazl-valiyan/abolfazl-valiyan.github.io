@@ -935,7 +935,51 @@ mark.hl {
 .project-card:hover {
     transform: translate(-2px, -2px);
 }
+/* ---------------- project technologies ---------------- */
 
+.project-tech {
+    margin: 10px 0 12px;
+    padding-top: 9px;
+    border-top: 1.5px dashed var(--line);
+}
+
+.tech-label {
+    display: inline-block;
+    margin-bottom: 7px;
+    font-family: var(--mono);
+    font-size: .58rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    direction: ltr;
+}
+
+.tech-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    background: var(--paper);
+    color: var(--ink);
+    border: 1.7px solid var(--ink);
+    border-radius: 5px;
+    font-family: var(--mono);
+    font-size: .62rem;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 2px 2px 0 0 var(--ink);
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.tech-chip:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 0 var(--green);
+}
 .p-icon {
     width: 44px;
     height: 44px;
