@@ -1107,7 +1107,61 @@ mark.hl {
     color: var(--muted);
     direction: ltr;
 }
+/* ---------------- clickable certificates ---------------- */
 
+.cert-clickable {
+    cursor: pointer;
+    padding: 10px;
+    margin: -10px 0 4px;
+    border: 2px solid transparent;
+    border-radius: 9px;
+    transition: all .18s ease;
+}
+
+.cert-clickable:hover {
+    background: var(--paper2);
+    border-color: var(--ink);
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 0 var(--green);
+}
+
+.cert-clickable:active {
+    transform: translate(0, 0);
+    box-shadow: 2px 2px 0 0 var(--green);
+}
+
+.cert-clickable::after {
+    content: 'VIEW ↗';
+    margin-inline-start: auto;
+    font-family: var(--mono);
+    font-size: .58rem;
+    font-weight: 800;
+    color: var(--muted);
+    opacity: 0;
+    transition: opacity .18s ease;
+}
+
+.cert-clickable:hover::after {
+    opacity: 1;
+}
+.cert-image {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    padding: 4px;
+    background: var(--paper);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
 /* ---------------- footer / caption ---------------- */
 .caption {
     border-top: 2.5px dashed var(--line);
@@ -1136,7 +1190,165 @@ mark.hl {
     transform: rotate(-3deg);
     direction: ltr;
 }
+/* ---------------- certificate modal ---------------- */
 
+.certificate-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.certificate-modal.open {
+    display: flex;
+}
+
+.certificate-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(21, 20, 15, .82);
+    backdrop-filter: blur(5px);
+}
+
+.certificate-viewer {
+    position: relative;
+    z-index: 2;
+    max-width: min(900px, 95vw);
+    max-height: 90vh;
+    padding: 12px;
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    border-radius: 12px;
+    box-shadow: 10px 10px 0 0 var(--orange);
+    animation: certificateIn .2s ease-out;
+}
+
+.certificate-viewer img {
+    display: block;
+    max-width: 100%;
+    max-height: 78vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: 2px solid var(--ink);
+    border-radius: 7px;
+}
+
+.certificate-close {
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    width: 38px;
+    height: 38px;
+    border: 2.5px solid var(--ink);
+    border-radius: 7px;
+    background: var(--orange);
+    color: var(--ink);
+    font-family: var(--mono);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 0 var(--ink);
+    z-index: 3;
+}
+
+.certificate-close:hover {
+    transform: translate(-1px, -1px);
+}
+
+.certificate-caption {
+    padding: 9px 4px 2px;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: .62rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+.certificate-prev,
+.certificate-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+
+    width: 42px;
+    height: 42px;
+
+    border: 2.5px solid var(--ink);
+    border-radius: 7px;
+
+    background: var(--yellow);
+    color: var(--ink);
+
+    font-family: var(--mono);
+    font-size: 30px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow: 3px 3px 0 var(--ink);
+
+    transition: .15s ease;
+}
+
+.certificate-prev {
+    left: -22px;
+}
+
+.certificate-next {
+    right: -22px;
+}
+
+.certificate-prev:hover,
+.certificate-next:hover {
+    transform: translateY(-50%) scale(1.08);
+}
+
+.certificate-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+@keyframes certificateIn {
+    from {
+        opacity: 0;
+        transform: scale(.94) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .certificate-modal {
+        padding: 18px;
+    }
+
+    .certificate-viewer {
+        max-width: 96vw;
+        padding: 8px;
+        box-shadow: 6px 6px 0 0 var(--orange);
+    }
+
+    .certificate-viewer img {
+        max-height: 78vh;
+    }
+
+    .certificate-close {
+        top: -13px;
+        left: -13px;
+        width: 34px;
+        height: 34px;
+        font-size: 21px;
+    }
+}
 @media (max-width: 980px) {
     .layout {
         grid-template-columns:1fr;

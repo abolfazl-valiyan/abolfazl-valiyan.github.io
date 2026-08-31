@@ -138,3 +138,93 @@
         });
     });
 })();
+let certificateImages = [];
+let currentCertificate = 0;
+
+function openCertificateGallery(images) {
+
+    certificateImages = images;
+    currentCertificate = 0;
+
+    const modal = document.getElementById('certificateModal');
+
+    modal.classList.add('open');
+
+    document.body.style.overflow = 'hidden';
+
+    showCertificate();
+}
+
+
+function showCertificate() {
+
+    const image = document.getElementById('certificateImage');
+    const counter = document.getElementById('certificateCounter');
+
+    image.src = certificateImages[currentCertificate];
+
+    counter.textContent =
+        `${currentCertificate + 1} / ${certificateImages.length}`;
+}
+
+
+function nextCertificate() {
+
+    if (certificateImages.length <= 1) return;
+
+    currentCertificate++;
+
+    if (currentCertificate >= certificateImages.length) {
+        currentCertificate = 0;
+    }
+
+    showCertificate();
+}
+
+
+function previousCertificate() {
+
+    if (certificateImages.length <= 1) return;
+
+    currentCertificate--;
+
+    if (currentCertificate < 0) {
+        currentCertificate = certificateImages.length - 1;
+    }
+
+    showCertificate();
+}
+
+
+function closeCertificate() {
+
+    const modal = document.getElementById('certificateModal');
+    const image = document.getElementById('certificateImage');
+
+    modal.classList.remove('open');
+
+    document.body.style.overflow = '';
+
+    setTimeout(() => {
+        image.src = '';
+    }, 200);
+}
+
+
+/* ESC برای بستن */
+
+document.addEventListener('keydown', function (event) {
+
+    if (event.key === 'Escape') {
+        closeCertificate();
+    }
+
+    if (event.key === 'ArrowRight') {
+        nextCertificate();
+    }
+
+    if (event.key === 'ArrowLeft') {
+        previousCertificate();
+    }
+
+});
