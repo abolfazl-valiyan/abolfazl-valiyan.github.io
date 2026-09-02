@@ -59,7 +59,9 @@
 })();
 
 /* ---------------- pixel avatar (rendered twice: header + profile) ---------------- */
+/* ---------------- pixel avatar ---------------- */
 (function () {
+
     const rows = [
         '.HHH..HHH.',
         '.HHHHHHHH.',
@@ -72,26 +74,60 @@
         '.PPPPPPPP.',
         '.PPCPPCPP.'
     ];
-    const colors = {H: '#20201a', S: '#eab88a', G: '#0c0c09', P: '#e8562c', C: '#2f9e63'};
+
+    const colors = {
+        H: '#20201a',
+        S: '#eab88a',
+        G: '#0c0c09',
+        P: '#e8562c',
+        C: '#2f9e63'
+    };
 
     function build(target) {
+
+        if (!target) {
+            console.warn('Pixel avatar target not found.');
+            return;
+        }
+
         rows.forEach(row => {
+
             [...row].forEach(ch => {
+
                 const d = document.createElement('div');
-                d.style.background = colors[ch] || 'transparent';
+
+                d.style.background =
+                    colors[ch] || 'transparent';
+
                 target.appendChild(d);
+
             });
+
         });
     }
 
-    build(document.getElementById('pixel-avatar'));
-    const igWrap = document.getElementById('igAvatarWrap');
-    const igGrid = document.createElement('div');
-    igGrid.id = 'pixel-avatar';
-    igWrap.appendChild(igGrid);
-    build(igGrid);
-})();
+    // Main avatar
+    const mainAvatar = document.getElementById('pixel-avatar');
 
+    if (mainAvatar) {
+        build(mainAvatar);
+    }
+
+    // Instagram avatar
+    const igWrap = document.getElementById('igAvatarWrap');
+
+    if (igWrap) {
+
+        const igGrid = document.createElement('div');
+
+        igGrid.id = 'pixel-avatar-instagram';
+
+        igWrap.appendChild(igGrid);
+
+        build(igGrid);
+    }
+
+})();
 /* ---------------- token-meter skill bars ---------------- */
 (function () {
     document.querySelectorAll('.skill-row').forEach(row => {
