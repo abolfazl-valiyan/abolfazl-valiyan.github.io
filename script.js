@@ -63,20 +63,21 @@
 (function () {
 
     const rows = [
-        '.HHH..HHH.',
-        '.HHHHHHHH.',
+        '.L.LL.L...',
+        'LLHHHHLL..',
+        'LHHHHHHHL.',
+        'HHHHHHHHHH',
         'HHSSSSSSHH',
-        'HSSSSSSSSH',
         'HSSGSSGSSH',
         'HSSSSSSSSH',
         '.SSSSSSSS.',
         '..PPPPPP..',
-        '.PPPPPPPP.',
         '.PPCPPCPP.'
     ];
 
     const colors = {
-        H: '#20201a',
+        H: '#1e1d19',
+        L: '#4d4a42',
         S: '#eab88a',
         G: '#0c0c09',
         P: '#e8562c',
@@ -111,20 +112,6 @@
 
     if (mainAvatar) {
         build(mainAvatar);
-    }
-
-    // Instagram avatar
-    const igWrap = document.getElementById('igAvatarWrap');
-
-    if (igWrap) {
-
-        const igGrid = document.createElement('div');
-
-        igGrid.id = 'pixel-avatar-instagram';
-
-        igWrap.appendChild(igGrid);
-
-        build(igGrid);
     }
 
 })();

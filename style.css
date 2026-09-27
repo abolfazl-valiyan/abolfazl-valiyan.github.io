@@ -100,14 +100,11 @@ body {
     overflow: hidden;
 }
 
-.avatar-ig #pixel-avatar {
-    grid-template-columns:repeat(10, 3.6px);
-    grid-template-rows:repeat(10, 3.6px);
-}
-
-.avatar-ig #pixel-avatar div {
-    width: 3.6px;
-    height: 3.6px;
+.avatar-ig .header-pixel-avatar {
+    width: 32px;
+    height: 32px;
+    display: block;
+    image-rendering: pixelated;
 }
 
 .ig-left b {
